@@ -7,3 +7,4 @@ staty.db
 data
 Spotify Extended Streaming History
 fix_db.py
+start_server.bat
