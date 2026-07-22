@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staty – Spotify Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <style>
+        /* ============================================================
+                   CSS VARIABLES & THEMES
+                   ============================================================ */
+        :root {
+            /* ── Dark (default) ── */
+            --bg-primary: #0b0b0e;
+            --bg-secondary: #141418;
+            --bg-card: rgba(20, 20, 26, 0.82);
+            --bg-card-hover: rgba(30, 30, 38, 0.90);
+            --bg-stat: rgba(255, 255, 255, 0.04);
+            --bg-stat-hover: rgba(255, 255, 255, 0.08);
+            --border-color: rgba(255, 255, 255, 0.06);
+            --border-active: rgba(29, 185, 84, 0.25);
+            --text-primary: #f0f0f5;
+            --text-secondary: #aaa;
+            --text-muted: #666;
+            --text-card-title: #888;
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.45);
+            --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.60), 0 0 0 1px rgba(29, 185, 84, 0.06);
+            --gradient-start: rgba(29, 185, 84, 0.08);
+            --gradient-end: rgba(29, 185, 84, 0.04);
+            --scrollbar-track: #1a1a1e;
+            --scrollbar-thumb: #1db954;
+            --filter-bg: #141418;
+            --filter-border: #222228;
+            --badge-bg: #1e1e24;
+            --badge-border: #2a2a30;
+            --chart-grid: rgba(255, 255, 255, 0.06);
+            --chart-label: #888;
+            --accent: #1db954;
+            --accent-glow: rgba(29, 185, 84, 0.25);
+        }
+
+        /* ── Light theme ── */
+        [data-theme="light"] {
+            --bg-primary: #f5f5f7;
+            --bg-secondary: #e8e8ec;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --bg-card-hover: rgba(255, 255, 255, 0.95);
+            --bg-stat: rgba(0, 0, 0, 0.04);
+            --bg-stat-hover: rgba(0, 0, 0, 0.07);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-active: rgba(29, 185, 84, 0.30);
+            --text-primary: #121212;
+            --text-secondary: #444;
+            --text-muted: #888;
+            --text-card-title: #666;
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(29, 185, 84, 0.10);
+            --gradient-start: rgba(29, 185, 84, 0.06);
+            --gradient-end: rgba(29, 185, 84, 0.02);
+            --scrollbar-track: #d8d8dc;
+            --scrollbar-thumb: #1db954;
+            --filter-bg: #e8e8ec;
+            --filter-border: #d0d0d6;
+            --badge-bg: #e0e0e6;
+            --badge-border: #c8c8ce;
+            --chart-grid: rgba(0, 0, 0, 0.08);
+            --chart-label: #666;
+            --accent: #1db954;
+            --accent-glow: rgba(29, 185, 84, 0.20);
+        }
+
+        /* ── Neon theme ── */
+        [data-theme="neon"] {
+            --bg-primary: #0a0a12;
+            --bg-secondary: #10101a;
+            --bg-card: rgba(16, 16, 30, 0.85);
+            --bg-card-hover: rgba(24, 24, 44, 0.92);
+            --bg-stat: rgba(0, 255, 200, 0.06);
+            --bg-stat-hover: rgba(0, 255, 200, 0.10);
+            --border-color: rgba(0, 255, 200, 0.12);
+            --border-active: rgba(0, 255, 200, 0.35);
+            --text-primary: #e0faff;
+            --text-secondary: #80d0e0;
+            --text-muted: #408090;
+            --text-card-title: #60a0b0;
+            --shadow-card: 0 8px 32px rgba(0, 255, 200, 0.06);
+            --shadow-card-hover: 0 16px 48px rgba(0, 255, 200, 0.10), 0 0 0 1px rgba(0, 255, 200, 0.15);
+            --gradient-start: rgba(0, 255, 200, 0.06);
+            --gradient-end: rgba(0, 255, 200, 0.02);
+            --scrollbar-track: #10101a;
+            --scrollbar-thumb: #00ffc8;
+            --filter-bg: #10101a;
+            --filter-border: #1a2a2a;
+            --badge-bg: #0a1a1a;
+            --badge-border: #1a2a2a;
+            --chart-grid: rgba(0, 255, 200, 0.10);
+            --chart-label: #40a0b0;
+            --accent: #00ffc8;
+            --accent-glow: rgba(0, 255, 200, 0.25);
+        }
+
+        /* ============================================================
+                   RESET & BASE
+                   ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 24px;
+            background-image: radial-gradient(ellipse at 20% 50%, var(--gradient-start) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, var(--gradient-end) 0%, transparent 50%);
+            transition: background 0.4s ease, color 0.3s ease;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* ============================================================
+                   HEADER
+                   ============================================================ */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 28px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-left .logo {
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        .header-left h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #1db954, #1ed760);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left .badge {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: var(--badge-bg);
+            padding: 4px 12px;
+            border-radius: 40px;
+            border: 1px solid var(--badge-border);
+            -webkit-text-fill-color: var(--text-secondary);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-right .update-time {
+            font-size: 13px;
+            color: var(--text-muted);
+            background: var(--bg-secondary);
+            padding: 6px 16px;
+            border-radius: 40px;
+            border: 1px solid var(--filter-border);
+            transition: background 0.3s;
+        }
+
+        /* ── Theme toggle ── */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--filter-border);
+            border-radius: 40px;
+            padding: 4px;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle button {
+            background: transparent;
+            border: none;
+            border-radius: 30px;
+            padding: 4px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .theme-toggle button:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .theme-toggle button.active {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 2px 12px var(--accent-glow);
+        }
+
+        [data-theme="light"] .theme-toggle button.active {
+            background: #1db954;
+            color: #fff;
+        }
+
+        [data-theme="neon"] .theme-toggle button.active {
+            background: #00ffc8;
+            color: #0a0a12;
+            box-shadow: 0 2px 20px rgba(0, 255, 200, 0.35);
+        }
+
+        /* ============================================================
+                   PERIOD FILTER
+                   ============================================================ */
+        .period-filter {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            background: var(--filter-bg);
+            padding: 6px;
+            border-radius: 60px;
+            border: 1px solid var(--filter-border);
+            backdrop-filter: blur(4px);
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .period-filter button {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .period-filter button:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .period-filter button.active {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+
+        /* ============================================================
+                   GRID & CARDS
+                   ============================================================ */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 20px 22px 22px;
+            transition: transform 0.25s ease, box-shadow 0.35s ease, border-color 0.3s ease, background 0.3s ease;
+            box-shadow: var(--shadow-card);
+            opacity: 0;
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.02s;
+        }
+        .card:nth-child(2) {
+            animation-delay: 0.06s;
+        }
+        .card:nth-child(3) {
+            animation-delay: 0.10s;
+        }
+        .card:nth-child(4) {
+            animation-delay: 0.14s;
+        }
+        .card:nth-child(5) {
+            animation-delay: 0.18s;
+        }
+        .card:nth-child(6) {
+            animation-delay: 0.22s;
+        }
+        .card:nth-child(7) {
+            animation-delay: 0.26s;
+        }
+        .card:nth-child(8) {
+            animation-delay: 0.30s;
+        }
+        .card:nth-child(9) {
+            animation-delay: 0.34s;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--border-active);
+            box-shadow: var(--shadow-card-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .card h3 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-card-title);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .card h3 .accent {
+            color: var(--accent);
+        }
+
+        /* ============================================================
+                   NOW PLAYING – Premium Card
+                   ============================================================ */
+        .np-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .np-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, var(--accent-glow) 0%, transparent 60%);
+            opacity: 0.15;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .np-card.has-track::before {
+            opacity: 0.30;
+            animation: npGlowPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes npGlowPulse {
+            0%,
+            100% {
+                opacity: 0.25;
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                opacity: 0.45;
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+
+        .now-playing {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 4px 0 6px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .now-playing .np-art {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            background: var(--bg-secondary);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.30);
+        }
+
+        .np-card.has-track .np-art {
+            transform: scale(1.02);
+            box-shadow: 0 8px 32px var(--accent-glow);
+            border-color: var(--accent);
+        }
+
+        .now-playing .np-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .now-playing .np-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .now-playing .np-info .np-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: color 0.3s;
+            letter-spacing: -0.2px;
+        }
+
+        .now-playing .np-info .np-artist {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 450;
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .now-playing .np-info .np-album {
+            font-size: 12px;
+            color: var(--text-muted);
+            opacity: 0.6;
+            margin-top: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .now-playing .np-status {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .now-playing .np-status .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+            animation: pulse-dot 1.4s ease-in-out infinite;
+            box-shadow: 0 0 12px var(--accent-glow);
+        }
+
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(0.6);
+            }
+        }
+
+        .now-playing .np-status.paused .dot {
+            animation: none;
+            background: var(--text-muted);
+            opacity: 0.4;
+            box-shadow: none;
+        }
+
+        /* ── Progress bar ── */
+        .np-progress-wrap {
+            margin-top: 14px;
+            padding-top: 4px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .np-progress-bar {
+            height: 4px;
+            border-radius: 4px;
+            background: var(--border-color);
+            overflow: hidden;
+            position: relative;
+            transition: height 0.2s ease;
+        }
+
+        .np-card.has-track .np-progress-bar {
+            height: 5px;
+        }
+
+        .np-progress-bar .np-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent));
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 16px var(--accent-glow);
+        }
+
+        .np-progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.2px;
+        }
+
+        /* ── Empty state ── */
+        .np-empty {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 8px 0 4px 0;
+            opacity: 0.6;
+        }
+
+        .np-empty .np-art {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            background: var(--bg-secondary);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 1px solid var(--border-color);
+        }
+
+        .np-empty .np-info .np-title {
+            font-size: 16px;
+            font-weight: 450;
+            color: var(--text-muted);
+        }
+
+        .np-empty .np-info .np-artist {
+            font-size: 13px;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        /* ============================================================
+                   PUG WIDGET
+                   ============================================================ */
+        .pug-widget {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 1000;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+            opacity: 0;
+            transform: scale(0.8) translateY(20px);
+            animation: pugEntrance 0.8s ease forwards 0.6s;
+        }
+
+        @keyframes pugEntrance {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .pug-widget:hover {
+            transform: scale(1.08) rotate(-2deg);
+        }
+
+        .pug-widget img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.40), 0 0 0 1px var(--border-color);
+            display: block;
+            transition: all 0.3s ease;
+            background: var(--bg-secondary);
+        }
+
+        .pug-widget.dancing img {
+            animation: pugDance 0.6s ease-in-out infinite alternate;
+            border-color: var(--accent);
+            box-shadow: 0 8px 32px var(--accent-glow), 0 0 0 2px var(--accent);
+        }
+
+        @keyframes pugDance {
+            0% {
+                transform: rotate(-8deg) scale(1);
+            }
+            100% {
+                transform: rotate(8deg) scale(1.04);
+            }
+        }
+
+        .pug-widget .pug-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-card);
+        }
+
+        .pug-widget:hover .pug-tooltip {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-12px);
+        }
+
+        /* Pug hidden on small screens */
+        @media (max-width: 640px) {
+            .pug-widget {
+                bottom: 16px;
+                right: 16px;
+            }
+            .pug-widget img {
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .pug-widget {
+                display: none;
+            }
+        }
+
+        /* ============================================================
+                   STATS ROW (Overview)
+                   ============================================================ */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .stat-item {
+            background: var(--bg-stat);
+            border-radius: 14px;
+            padding: 14px 12px;
+            text-align: center;
+            transition: background 0.2s ease, transform 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item:hover {
+            background: var(--bg-stat-hover);
+            transform: scale(1.02);
+        }
+
+        .stat-number {
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+            transition: color 0.2s;
+        }
+
+        .stat-number .highlight {
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 450;
+            letter-spacing: 0.2px;
+        }
+
+        /* ============================================================
+                   LIST ITEMS
+                   ============================================================ */
+        .list-item {
+            padding: 8px 4px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.15s ease, padding-left 0.2s ease, border-color 0.3s;
+            border-radius: 6px;
+            cursor: default;
+        }
+
+        .list-item:hover {
+            background: var(--bg-stat);
+            padding-left: 8px;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-item .rank {
+            font-weight: 700;
+            font-size: 13px;
+            min-width: 28px;
+            font-variant-numeric: tabular-nums;
+            transition: color 0.2s;
+        }
+
+        .list-item .rank.gold {
+            color: #ffd700;
+        }
+        .list-item .rank.silver {
+            color: #c0c0c0;
+        }
+        .list-item .rank.bronze {
+            color: #cd7f32;
+        }
+        .list-item .rank.default {
+            color: var(--text-muted);
+        }
+
+        .list-item .name {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 450;
+            margin: 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text-primary);
+            transition: color 0.3s;
+        }
+
+        .list-item .name .sub {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .list-item .value {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+            transition: color 0.3s;
+        }
+
+        .list-item .progress-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 0 0 80px;
+        }
+
+        .list-item .progress-bar {
+            height: 4px;
+            border-radius: 4px;
+            background: var(--border-color);
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .list-item .progress-bar .fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+            transition: width 0.6s ease;
+        }
+
+        /* ============================================================
+                   CHARTS
+                   ============================================================ */
+        .chart-wrapper {
+            position: relative;
+            height: 180px;
+            margin-top: 4px;
+        }
+
+        .chart-wrapper.tall {
+            height: 220px;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* ============================================================
+                   SKELETON LOADING
+                   ============================================================ */
+        .skeleton {
+            background: linear-gradient(90deg,
+                    var(--bg-secondary) 25%,
+                    var(--bg-card-hover) 50%,
+                    var(--bg-secondary) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.6s ease-in-out infinite;
+            border-radius: 8px;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .skeleton-list .skeleton-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .skeleton-list .skeleton-item .skeleton-rank {
+            width: 28px;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        .skeleton-list .skeleton-item .skeleton-name {
+            flex: 1;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        .skeleton-list .skeleton-item .skeleton-value {
+            width: 50px;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        /* ============================================================
+                   EMPTY STATE
+                   ============================================================ */
+        .empty-state {
+            text-align: center;
+            padding: 28px 8px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .empty-state .big {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 700px) {
+            body {
+                padding: 14px;
+            }
+            .header-left h1 {
+                font-size: 22px;
+            }
+            .period-filter {
+                border-radius: 30px;
+                padding: 4px;
+                gap: 4px;
+            }
+            .period-filter button {
+                padding: 6px 14px;
+                font-size: 12px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .card {
+                padding: 16px 16px 18px;
+            }
+            .list-item .name {
+                font-size: 13px;
+            }
+            .header-right .update-time {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+            .theme-toggle button {
+                font-size: 14px;
+                padding: 2px 8px;
+            }
+            .now-playing .np-art {
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
+            }
+            .now-playing .np-info .np-title {
+                font-size: 15px;
+            }
+            .np-empty .np-art {
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+            .header-left .badge {
+                display: none;
+            }
+            .header-left h1 {
+                font-size: 20px;
+            }
+            .header-left .logo {
+                font-size: 26px;
+            }
+            .now-playing {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .now-playing .np-art {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+            .now-playing .np-info .np-title {
+                font-size: 14px;
+            }
+            .np-empty .np-art {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ─── HEADER ─── -->
+        <header class="header">
+            <div class="header-left">
+                <span class="logo">🎧</span>
+                <h1>Staty</h1>
+                <span class="badge">Spotify Wrapped +</span>
+            </div>
+            <div class="header-right">
+                <span class="update-time" id="last-update">⏱️ ładowanie…</span>
+                <div class="theme-toggle" id="themeToggle">
+                    <button data-theme="dark" class="active" title="Dark mode">🌙</button>
+                    <button data-theme="light" title="Light mode">☀️</button>
+                    <button data-theme="neon" title="Neon mode">💚</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- ─── PERIOD FILTER ─── -->
+        <div class="period-filter" id="periodFilter">
+            <button data-period="day">Dzisiaj</button>
+            <button data-period="week" class="active">Ten tydzień</button>
+            <button data-period="month">Ten miesiąc</button>
+            <button data-period="all">All time</button>
+        </div>
+
+        <!-- ─── GRID ─── -->
+        <div class="grid">
+
+            <!-- Overview -->
+            <div class="card" id="overview">
+                <h3>📊 Podsumowanie</h3>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-time">0<span class="highlight">h</span></div>
+                        <div class="stat-label">Czas słuchania</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-tracks">0</div>
+                        <div class="stat-label">Utwory</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-artists">0</div>
+                        <div class="stat-label">Artyści</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="avg-session">0<span class="highlight">m</span></div>
+                        <div class="stat-label">Średnia sesja</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─── NOW PLAYING (Premium) ─── -->
+            <div class="card np-card" id="now-playing-card">
+                <h3>▶️ <span class="accent">Teraz słuchasz</span></h3>
+                <div id="now-playing-content">
+                    <!-- Dynamic content injected by JS -->
+                </div>
+            </div>
+
+            <!-- Top Artists -->
+            <div class="card" id="top-artists">
+                <h3>🏆 <span class="accent">Top artyści</span> <span style="font-weight:400;color:var(--text-muted);font-size:11px;text-transform:none;">(czas)</span></h3>
+                <div id="top-artists-list"></div>
+            </div>
+
+            <!-- Top Tracks -->
+            <div class="card" id="top-tracks">
+                <h3>🎵 <span class="accent">Top utwory</span> <span style="font-weight:400;color:var(--text-muted);font-size:11px;text-transform:none;">(czas)</span></h3>
+                <div id="top-tracks-list"></div>
+            </div>
+
+            <!-- Skipped Tracks -->
+            <div class="card" id="skipped-tracks">
+                <h3>⏭️ <span class="accent">Najczęściej skipowane</span> <span style="font-weight:400;color:var(--text-muted);font-size:11px;text-transform:none;">utwory</span></h3>
+                <div id="skipped-tracks-list"></div>
+            </div>
+
+            <!-- Skipped Artists -->
+            <div class="card" id="skipped-artists">
+                <h3>⏭️ <span class="accent">Najczęściej skipowani</span> <span style="font-weight:400;color:var(--text-muted);font-size:11px;text-transform:none;">artyści</span></h3>
+                <div id="skipped-artists-list"></div>
+            </div>
+
+            <!-- Hours chart -->
+            <div class="card">
+                <h3>🕒 <span class="accent">Godziny słuchania</span></h3>
+                <div class="chart-wrapper"><canvas id="hoursChart"></canvas></div>
+            </div>
+
+            <!-- Weekday chart -->
+            <div class="card">
+                <h3>📅 <span class="accent">Dni tygodnia</span></h3>
+                <div class="chart-wrapper"><canvas id="weekdayChart"></canvas></div>
+            </div>
+
+            <!-- Status distribution -->
+            <div class="card">
+                <h3>📊 <span class="accent">Status odsłuchań</span></h3>
+                <div class="chart-wrapper tall"><canvas id="statusChart"></canvas></div>
+            </div>
+
+        </div><!-- /grid -->
+    </div><!-- /container -->
+
+    <!-- ─── PUG WIDGET ─── -->
+    <div class="pug-widget" id="pugWidget" title="🎵 Pug says: Keep jamming!">
+        <img src="https://media.tenor.com/t_c6v95GzCgAAAAi/cute-pug.gif" alt="Dancing pug" loading="lazy">
+        <span class="pug-tooltip">🎵 🐾 Jamming with you!</span>
+    </div>
+
+    <script>
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           CONFIG
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        const API_BASE = 'http://127.0.0.1:5000';
+        let currentPeriod = 'week';
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           THEME SYSTEM
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('staty-theme', theme);
+            document.querySelectorAll('#themeToggle button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.theme === theme);
+            });
+            updateChartColors();
+        }
+
+        function loadTheme() {
+            const saved = localStorage.getItem('staty-theme');
+            setTheme(saved || 'dark');
+        }
+
+        document.querySelectorAll('#themeToggle button').forEach(btn => {
+            btn.addEventListener('click', () => setTheme(btn.dataset.theme));
+        });
+
+        function updateChartColors() {
+            const isNeon = document.documentElement.getAttribute('data-theme') === 'neon';
+            const accent = isNeon ? '#00ffc8' : '#1db954';
+            const accentLight = isNeon ? '#40ffd8' : '#1ed760';
+            const gridColor = getComputedStyle(document.documentElement).getPropertyValue('--chart-grid').trim() ||
+                'rgba(255,255,255,0.06)';
+            const labelColor = getComputedStyle(document.documentElement).getPropertyValue('--chart-label').trim() ||
+                '#888';
+
+            if (hoursChart) {
+                hoursChart.data.datasets[0].backgroundColor = accent;
+                hoursChart.options.scales.y.ticks.color = labelColor;
+                hoursChart.options.scales.x.ticks.color = labelColor;
+                hoursChart.update();
+            }
+            if (weekdayChart) {
+                weekdayChart.data.datasets[0].backgroundColor = accentLight;
+                weekdayChart.options.scales.y.ticks.color = labelColor;
+                weekdayChart.options.scales.x.ticks.color = labelColor;
+                weekdayChart.update();
+            }
+            if (statusChart) {
+                statusChart.data.datasets[0].backgroundColor = isNeon ?
+                    ['#00ffc8', '#ffaa00', '#ff4444'] :
+                    ['#1db954', '#ffaa00', '#ff4444'];
+                statusChart.options.plugins.legend.labels.color = labelColor;
+                statusChart.update();
+            }
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           CHARTS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        let hoursChart, weekdayChart, statusChart;
+
+        function initCharts() {
+            const common = {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: 800, easing: 'easeOutQuart' }
+            };
+
+            const isNeon = document.documentElement.getAttribute('data-theme') === 'neon';
+            const accent = isNeon ? '#00ffc8' : '#1db954';
+            const accentLight = isNeon ? '#40ffd8' : '#1ed760';
+            const gridColor = getComputedStyle(document.documentElement).getPropertyValue('--chart-grid').trim() ||
+                'rgba(255,255,255,0.06)';
+            const labelColor = getComputedStyle(document.documentElement).getPropertyValue('--chart-label').trim() ||
+                '#888';
+
+            // Hours Chart
+            const ctxHours = document.getElementById('hoursChart').getContext('2d');
+            const gradientHours = ctxHours.createLinearGradient(0, 0, 0, 180);
+            gradientHours.addColorStop(0, accent);
+            gradientHours.addColorStop(1, accent + '44');
+
+            hoursChart = new Chart(ctxHours, {
+                type: 'bar',
+                data: { labels: [], datasets: [{ label: 'Czas (h)', data: [], backgroundColor: gradientHours,
+                        borderRadius: 4, borderSkipped: false }] },
+                options: {
+                    ...common,
+                    scales: {
+                        y: { beginAtZero: true, ticks: { color: labelColor, callback: v => v.toFixed(1) + 'h' },
+                            grid: { color: gridColor } },
+                        x: { ticks: { color: labelColor, maxTicksLimit: 12 }, grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(2) + 'h' } }
+                    }
+                }
+            });
+
+            // Weekday Chart
+            const ctxWeekday = document.getElementById('weekdayChart').getContext('2d');
+            const gradientWeekday = ctxWeekday.createLinearGradient(0, 0, 0, 180);
+            gradientWeekday.addColorStop(0, accentLight);
+            gradientWeekday.addColorStop(1, accentLight + '44');
+
+            weekdayChart = new Chart(ctxWeekday, {
+                type: 'bar',
+                data: { labels: [], datasets: [{ label: 'Czas (s)', data: [], backgroundColor: gradientWeekday,
+                        borderRadius: 4, borderSkipped: false }] },
+                options: {
+                    ...common,
+                    scales: {
+                        y: { beginAtZero: true, ticks: { color: labelColor }, grid: { color: gridColor } },
+                        x: { ticks: { color: labelColor }, grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => {
+                                    const sec = ctx.parsed.y;
+                                    if (sec >= 3600) return (sec / 3600).toFixed(2) + 'h';
+                                    if (sec >= 60) return (sec / 60).toFixed(1) + 'm';
+                                    return sec.toFixed(0) + 's';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Status Chart
+            const ctxStatus = document.getElementById('statusChart').getContext('2d');
+            const statusColors = isNeon ? ['#00ffc8', '#ffaa00', '#ff4444'] : ['#1db954', '#ffaa00', '#ff4444'];
+
+            statusChart = new Chart(ctxStatus, {
+                type: 'doughnut',
+                data: { labels: [], datasets: [{ data: [], backgroundColor: statusColors, borderWidth: 2,
+                        borderColor: 'var(--bg-card)' }] },
+                options: {
+                    ...common,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: labelColor, boxWidth: 12, padding: 12, usePointStyle: true,
+                                pointStyle: 'circle' }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => {
+                                    const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                    const pct = total ? ((ctx.parsed / total) * 100).toFixed(1) : 0;
+                                    return ctx.label + ': ' + ctx.parsed + ' (' + pct + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           HELPERS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        function formatTime(seconds) {
+            if (seconds >= 3600) return (seconds / 3600).toFixed(2) + 'h';
+            if (seconds >= 60) return (seconds / 60).toFixed(1) + 'm';
+            return seconds.toFixed(0) + 's';
+        }
+
+        function formatDuration(ms) {
+            if (!ms || ms <= 0) return '0:00';
+            const totalSec = Math.floor(ms / 1000);
+            const mins = Math.floor(totalSec / 60);
+            const secs = totalSec % 60;
+            return mins + ':' + String(secs).padStart(2, '0');
+        }
+
+        function fetchData(endpoint, period, cb) {
+            fetch(`${API_BASE}${endpoint}?period=${period}`)
+                .then(r => r.json())
+                .then(cb)
+                .catch(err => console.error(err));
+        }
+
+        function renderSkeleton(containerId, count = 5) {
+            const el = document.getElementById(containerId);
+            if (!el) return;
+            let html = '<div class="skeleton-list">';
+            for (let i = 0; i < count; i++) {
+                html += `
+                            <div class="skeleton-item">
+                                <div class="skeleton skeleton-rank"></div>
+                                <div class="skeleton skeleton-name"></div>
+                                <div class="skeleton skeleton-value"></div>
+                            </div>
+                        `;
+            }
+            html += '</div>';
+            el.innerHTML = html;
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           RENDER LIST
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        function renderList(containerId, data, formatter, showProgress = false) {
+            const el = document.getElementById(containerId);
+            if (!el) return;
+            if (!data || data.length === 0) {
+                el.innerHTML = `<div class="empty-state"><span class="big">📭</span>Brak danych</div>`;
+                return;
+            }
+
+            let maxVal = 0;
+            if (showProgress) {
+                const vals = data.map(item => {
+                    if (item.seconds !== undefined) return item.seconds;
+                    if (item.skips !== undefined) return item.skips;
+                    if (item.value !== undefined) return item.value;
+                    return 0;
+                });
+                maxVal = Math.max(...vals, 1);
+            }
+
+            el.innerHTML = '';
+            data.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = 'list-item';
+
+                const rank = document.createElement('span');
+                rank.className = 'rank';
+                const rankNum = idx + 1;
+                if (rankNum === 1) rank.className += ' gold';
+                else if (rankNum === 2) rank.className += ' silver';
+                else if (rankNum === 3) rank.className += ' bronze';
+                else rank.className += ' default';
+                rank.textContent = `#${rankNum}`;
+
+                const name = document.createElement('span');
+                name.className = 'name';
+                if (item.title) {
+                    name.textContent = item.title + ' – ';
+                    const sub = document.createElement('span');
+                    sub.className = 'sub';
+                    sub.textContent = item.artist || 'Nieznany';
+                    name.appendChild(sub);
+                } else {
+                    name.textContent = item.artist || 'Nieznany';
+                }
+
+                const value = document.createElement('span');
+                value.className = 'value';
+                value.textContent = formatter(item);
+
+                div.appendChild(rank);
+                div.appendChild(name);
+                div.appendChild(value);
+
+                if (showProgress && maxVal > 0) {
+                    const val = item.seconds !== undefined ? item.seconds :
+                        item.skips !== undefined ? item.skips :
+                        item.value !== undefined ? item.value : 0;
+                    const pct = (val / maxVal) * 100;
+                    const wrap = document.createElement('div');
+                    wrap.className = 'progress-wrap';
+                    const bar = document.createElement('div');
+                    bar.className = 'progress-bar';
+                    const fill = document.createElement('div');
+                    fill.className = 'fill';
+                    fill.style.width = pct + '%';
+                    bar.appendChild(fill);
+                    wrap.appendChild(bar);
+                    div.appendChild(wrap);
+                }
+
+                el.appendChild(div);
+            });
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           NOW PLAYING – FETCH & RENDER
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        let currentTrackData = null;
+
+        function updateNowPlaying() {
+            fetch(`${API_BASE}/stats/current`)
+                .then(r => r.json())
+                .then(data => {
+                    renderNowPlaying(data);
+                    // Update pug dance state
+                    const pug = document.getElementById('pugWidget');
+                    if (data.playing) {
+                        pug.classList.add('dancing');
+                        document.getElementById('now-playing-card').classList.add('has-track');
+                    } else {
+                        pug.classList.remove('dancing');
+                        document.getElementById('now-playing-card').classList.remove('has-track');
+                    }
+                })
+                .catch(err => {
+                    console.error('Now Playing fetch error:', err);
+                    renderNowPlaying(null);
+                });
+        }
+
+        function renderNowPlaying(data) {
+            const container = document.getElementById('now-playing-content');
+            if (!container) return;
+
+            if (!data || !data.playing || !data.track) {
+                container.innerHTML = `
+                            <div class="np-empty">
+                                <div class="np-art">🎵</div>
+                                <div class="np-info">
+                                    <div class="np-title">Brak aktywnego odtwarzania</div>
+                                    <div class="np-artist">Otwórz Spotify i zacznij słuchać</div>
+                                </div>
+                            </div>
+                        `;
+                return;
+            }
+
+            const track = data.track;
+            const progressPct = Math.min(track.percentage || 0, 100);
+            const isPlaying = data.playing;
+
+            container.innerHTML = `
+                        <div class="now-playing">
+                            <div class="np-art">
+                                ${track.image_url && track.image_url.startsWith('http') 
+                                    ? `<img src="${track.image_url}" alt="${track.title}" onerror="this.style.display='none';this.parentElement.textContent='🎵'">` 
+                                    : '🎵'}
+                            </div>
+                            <div class="np-info">
+                                <div class="np-title">${track.title || 'Nieznany'}</div>
+                                <div class="np-artist">${track.artist || '—'}</div>
+                                <div class="np-album">${track.album || ''}</div>
+                            </div>
+                            <div class="np-status ${isPlaying ? '' : 'paused'}">
+                                <span class="dot"></span>
+                                ${isPlaying ? 'gra' : 'pauza'}
+                            </div>
+                        </div>
+                        <div class="np-progress-wrap">
+                            <div class="np-progress-bar">
+                                <div class="np-fill" style="width: ${progressPct}%;"></div>
+                            </div>
+                            <div class="np-progress-info">
+                                <span>${formatDuration(track.progress_ms || 0)}</span>
+                                <span>${formatDuration(track.duration_ms || 0)}</span>
+                            </div>
+                        </div>
+                    `;
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           STATS UPDATE FUNCTIONS
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        function updateOverview(period) {
+            fetchData('/stats/overview', period, (data) => {
+                document.getElementById('total-time').textContent = formatTime(data.total_seconds);
+                document.getElementById('total-tracks').textContent = data.total_tracks || 0;
+                document.getElementById('total-artists').textContent = data.total_artists || 0;
+                document.getElementById('avg-session').textContent = formatTime(data.avg_session_seconds);
+            });
+        }
+
+        function updateTopArtists(period) {
+            renderSkeleton('top-artists-list', 5);
+            fetchData('/stats/top-artists', period, (data) => {
+                renderList('top-artists-list', data, (item) => formatTime(item.seconds), true);
+            });
+        }
+
+        function updateTopTracks(period) {
+            renderSkeleton('top-tracks-list', 5);
+            fetchData('/stats/top-tracks', period, (data) => {
+                renderList('top-tracks-list', data, (item) => formatTime(item.seconds), true);
+            });
+        }
+
+        function updateSkippedTracks(period) {
+            renderSkeleton('skipped-tracks-list', 5);
+            fetchData('/stats/top-skipped-tracks', period, (data) => {
+                renderList('skipped-tracks-list', data, (item) => item.skips + '×', true);
+            });
+        }
+
+        function updateSkippedArtists(period) {
+            renderSkeleton('skipped-artists-list', 5);
+            fetchData('/stats/top-skipped-artists', period, (data) => {
+                renderList('skipped-artists-list', data, (item) => item.skips + '×', true);
+            });
+        }
+
+        function updateHoursChart(period) {
+            fetchData('/stats/listening-hours', period, (data) => {
+                const hoursData = data.map(d => ({ hour: d.hour, hours: d.seconds / 3600 }));
+                hoursChart.data.labels = hoursData.map(d => d.hour + ':00');
+                hoursChart.data.datasets[0].data = hoursData.map(d => d.hours);
+                hoursChart.update();
+            });
+        }
+
+        function updateWeekdayChart(period) {
+            fetchData('/stats/weekday', period, (data) => {
+                weekdayChart.data.labels = data.map(d => d.day);
+                weekdayChart.data.datasets[0].data = data.map(d => d.seconds);
+                weekdayChart.update();
+            });
+        }
+
+        function updateStatusChart(period) {
+            fetchData('/stats/status-distribution', period, (data) => {
+                const labels = Object.keys(data);
+                const values = Object.values(data);
+                statusChart.data.labels = labels;
+                statusChart.data.datasets[0].data = values;
+                statusChart.update();
+            });
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           REFRESH ALL
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        function refreshAll(period) {
+            currentPeriod = period;
+            document.querySelectorAll('#periodFilter button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.period === period);
+            });
+            document.getElementById('last-update').textContent = '⏱️ ' + new Date().toLocaleTimeString();
+
+            updateOverview(period);
+            updateNowPlaying();
+            updateTopArtists(period);
+            updateTopTracks(period);
+            updateSkippedTracks(period);
+            updateSkippedArtists(period);
+            updateHoursChart(period);
+            updateWeekdayChart(period);
+            updateStatusChart(period);
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           BOOT
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTheme();
+            initCharts();
+
+            document.querySelectorAll('#periodFilter button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    refreshAll(btn.dataset.period);
+                });
+            });
+
+            // Initial load
+            refreshAll('week');
+
+            // Now Playing poll every 2 seconds (real-time)
+            setInterval(updateNowPlaying, 10000);
+
+            // Stats refresh every 30 seconds
+            setInterval(() => {
+                refreshAll(currentPeriod);
+            }, 60000);
+        });
+
+        // Theme override for chart color sync
+        const originalSetTheme = setTheme;
+        setTheme = function(theme) {
+            originalSetTheme(theme);
+            setTimeout(() => {
+                if (hoursChart) updateChartColors();
+            }, 50);
+        };
+        window.setTheme = setTheme;
+    </script>
+
+</body>
+
+</html>

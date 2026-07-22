@@ -1,0 +1,1971 @@
+[
+  {
+    "uid": "66616666356530623033653631656133",
+    "uri": "spotify:track:1TDl7SvVKAVuOwUq4aPKCr",
+    "name": "Układanka",
+    "duration": {
+      "milliseconds": 187000
+    },
+    "album": {
+      "uri": "spotify:album:0jLLQGibUWYpHa09ihCsEU",
+      "name": "Plansze"
+    },
+    "artists": [
+      {
+        "name": "Jan-Rapowanie",
+        "uri": "spotify:artist:43yekIowVCHkR6TGGg9gSp"
+      },
+      {
+        "name": "Nocny",
+        "uri": "spotify:artist:2VZTBcS7ecOfaEwIfkak2r"
+      },
+      {
+        "name": "Holak",
+        "uri": "spotify:artist:4nOJhl27dVniTozwVZYa4c"
+      }
+    ],
+    "metadata": {
+      "album_uri": "spotify:album:0jLLQGibUWYpHa09ihCsEU",
+      "has_lyrics": "true",
+      "album_track_number": "5",
+      "album_artist_name": "Jan-Rapowanie",
+      "album_disc_count": "1",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "duration": "187000",
+      "context_repetition_penalty": "0.0",
+      "artist_uri:2": "spotify:artist:4nOJhl27dVniTozwVZYa4c",
+      "image_url": "spotify:image:ab67616d00001e024cac9de22d545693400ba4b8",
+      "score": "0.94436455",
+      "album_track_count": "0",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "popularity": "59",
+      "track_player": "audio",
+      "iteration": "0",
+      "album_title": "Plansze",
+      "marked_for_download": "false",
+      "collection.in_collection": "false",
+      "image_small_url": "spotify:image:ab67616d000048514cac9de22d545693400ba4b8",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2734cac9de22d545693400ba4b8",
+      "time_of_day_vector_distance": "0.055635452",
+      "collection.can_ban": "true",
+      "view_index": "3",
+      "artist_name:2": "Holak",
+      "time_of_day_vector_cosine_sim": "0.94436455",
+      "title": "Układanka",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "actions.skipping_prev_past_track": "resume",
+      "artist_uri:1": "spotify:artist:2VZTBcS7ecOfaEwIfkak2r",
+      "screen_recording_enabled": "true",
+      "album_disc_number": "1",
+      "artist_name:1": "Nocny",
+      "actions.skipping_next_past_track": "resume",
+      "image_large_url": "spotify:image:ab67616d0000b2734cac9de22d545693400ba4b8",
+      "collection.can_add": "true",
+      "artist_uri": "spotify:artist:43yekIowVCHkR6TGGg9gSp",
+      "collection.is_banned": "false",
+      "artist_name": "Jan-Rapowanie"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e024cac9de22d545693400ba4b8"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048514cac9de22d545693400ba4b8"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2734cac9de22d545693400ba4b8"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2734cac9de22d545693400ba4b8"
+      }
+    ],
+    "listenDate": 1784287175301,
+    "dateFinalized": false
+  },
+  {
+    "uid": "65623330356665373961373764353265",
+    "uri": "spotify:track:4wLrbJ1htsfm0Lxw3GcGFs",
+    "name": "Mówiłaś",
+    "duration": {
+      "milliseconds": 182000
+    },
+    "album": {
+      "uri": "spotify:album:4iKFycpVeS5Hecacq6lx4y",
+      "name": "Trappist"
+    },
+    "artists": [
+      {
+        "name": "Young Igi",
+        "uri": "spotify:artist:1yq2JzsqbzFbJ1B7wGOXLc"
+      }
+    ],
+    "metadata": {
+      "artist_name": "Young Igi",
+      "duration": "182000",
+      "collection.can_add": "true",
+      "collection.in_collection": "false",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "image_small_url": "spotify:image:ab67616d000048510953f74907698ba08032031b",
+      "collection.can_ban": "true",
+      "time_of_day_vector_cosine_sim": "0.94314003",
+      "album_track_number": "7",
+      "album_track_count": "0",
+      "popularity": "57",
+      "album_disc_count": "1",
+      "album_title": "Trappist",
+      "image_large_url": "spotify:image:ab67616d0000b2730953f74907698ba08032031b",
+      "collection.is_banned": "false",
+      "album_disc_number": "1",
+      "image_url": "spotify:image:ab67616d00001e020953f74907698ba08032031b",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "time_of_day_vector_distance": "0.05685997",
+      "score": "0.94314003",
+      "title": "Mówiłaś",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2730953f74907698ba08032031b",
+      "marked_for_download": "false",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "view_index": "4",
+      "artist_uri": "spotify:artist:1yq2JzsqbzFbJ1B7wGOXLc",
+      "screen_recording_enabled": "true",
+      "has_lyrics": "true",
+      "is_explicit": "true",
+      "actions.skipping_prev_past_track": "resume",
+      "album_uri": "spotify:album:4iKFycpVeS5Hecacq6lx4y",
+      "actions.skipping_next_past_track": "resume",
+      "context_repetition_penalty": "0.0",
+      "album_artist_name": "Young Igi",
+      "iteration": "0",
+      "track_player": "audio"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e020953f74907698ba08032031b"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048510953f74907698ba08032031b"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2730953f74907698ba08032031b"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2730953f74907698ba08032031b"
+      }
+    ],
+    "listenDate": 1784287330105,
+    "dateFinalized": false
+  },
+  {
+    "uid": "30303335363465343462656237636539",
+    "uri": "spotify:track:7gPbVDk8Es7AVHTLUFq6CU",
+    "name": "Ground Zero",
+    "duration": {
+      "milliseconds": 182000
+    },
+    "album": {
+      "uri": "spotify:album:4jri1WGY01xNetAXhHv4d9",
+      "name": "Ground Zero Mixtape"
+    },
+    "artists": [
+      {
+        "name": "PRO8L3M",
+        "uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7"
+      }
+    ],
+    "metadata": {
+      "album_track_number": "28",
+      "time_of_day_vector_distance": "0.059384346",
+      "collection.can_add": "true",
+      "collection.in_collection": "false",
+      "album_disc_number": "1",
+      "popularity": "67",
+      "album_artist_name": "PRO8L3M",
+      "score": "0.94061565",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "album_uri": "spotify:album:4jri1WGY01xNetAXhHv4d9",
+      "album_title": "Ground Zero Mixtape",
+      "collection.can_ban": "true",
+      "album_disc_count": "1",
+      "image_small_url": "spotify:image:ab67616d00004851b15f3fc29390c11c16796296",
+      "artist_uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7",
+      "marked_for_download": "false",
+      "artist_name": "PRO8L3M",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "actions.skipping_next_past_track": "resume",
+      "title": "Ground Zero",
+      "iteration": "0",
+      "album_track_count": "0",
+      "track_player": "audio",
+      "actions.skipping_prev_past_track": "resume",
+      "has_lyrics": "true",
+      "time_of_day_vector_cosine_sim": "0.94061565",
+      "image_url": "spotify:image:ab67616d00001e02b15f3fc29390c11c16796296",
+      "image_large_url": "spotify:image:ab67616d0000b273b15f3fc29390c11c16796296",
+      "screen_recording_enabled": "true",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "collection.is_banned": "false",
+      "context_repetition_penalty": "0.0",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273b15f3fc29390c11c16796296",
+      "view_index": "5",
+      "duration": "182000"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02b15f3fc29390c11c16796296"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851b15f3fc29390c11c16796296"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273b15f3fc29390c11c16796296"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273b15f3fc29390c11c16796296"
+      }
+    ],
+    "listenDate": 1784287512562,
+    "dateFinalized": false
+  },
+  {
+    "uid": "31346263313761313531386666663733",
+    "uri": "spotify:track:0ubZ73Q3nUbhhB8M1nHKDe",
+    "name": "Faka",
+    "duration": {
+      "milliseconds": 125000
+    },
+    "album": {
+      "uri": "spotify:album:1IWxPZI6rElVjS1XbzcFn1",
+      "name": "Młody Matczak"
+    },
+    "artists": [
+      {
+        "name": "Mata",
+        "uri": "spotify:artist:0MIG6gMcQTSvFbKvUwK0id"
+      },
+      {
+        "name": "Pedro",
+        "uri": "spotify:artist:2LI7lXaNJU420lffFWJUcT"
+      }
+    ],
+    "metadata": {
+      "artist_name:1": "Pedro",
+      "view_index": "6",
+      "screen_recording_enabled": "true",
+      "album_disc_count": "1",
+      "duration": "125000",
+      "track_player": "audio",
+      "image_url": "spotify:image:ab67616d00001e021147cf18657eb0cac9a2a6c4",
+      "title": "Faka",
+      "collection.can_add": "true",
+      "image_small_url": "spotify:image:ab67616d000048511147cf18657eb0cac9a2a6c4",
+      "iteration": "0",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "marked_for_download": "false",
+      "popularity": "58",
+      "artist_uri": "spotify:artist:0MIG6gMcQTSvFbKvUwK0id",
+      "album_disc_number": "1",
+      "album_track_count": "0",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "time_of_day_vector_cosine_sim": "0.9369736",
+      "album_uri": "spotify:album:1IWxPZI6rElVjS1XbzcFn1",
+      "time_of_day_vector_distance": "0.06302643",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "album_track_number": "9",
+      "score": "0.9369736",
+      "collection.can_ban": "true",
+      "artist_uri:1": "spotify:artist:2LI7lXaNJU420lffFWJUcT",
+      "collection.is_banned": "false",
+      "has_lyrics": "true",
+      "image_large_url": "spotify:image:ab67616d0000b2731147cf18657eb0cac9a2a6c4",
+      "collection.in_collection": "false",
+      "actions.skipping_prev_past_track": "resume",
+      "album_artist_name": "Mata",
+      "album_title": "Młody Matczak",
+      "is_explicit": "true",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2731147cf18657eb0cac9a2a6c4",
+      "context_repetition_penalty": "0.0",
+      "actions.skipping_next_past_track": "resume",
+      "artist_name": "Mata"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e021147cf18657eb0cac9a2a6c4"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048511147cf18657eb0cac9a2a6c4"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2731147cf18657eb0cac9a2a6c4"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2731147cf18657eb0cac9a2a6c4"
+      }
+    ],
+    "listenDate": 1784288229616,
+    "dateFinalized": false
+  },
+  {
+    "uid": "34656538613137643335626361313563",
+    "uri": "spotify:track:0TWZUmwiUqn873qs9BDgsC",
+    "name": "8 kobiet",
+    "duration": {
+      "milliseconds": 199000
+    },
+    "album": {
+      "uri": "spotify:album:7sFTg1OTqCzmDykyrlQi8D",
+      "name": "Soma 0,5 mg"
+    },
+    "artists": [
+      {
+        "name": "TACONAFIDE",
+        "uri": "spotify:artist:5vgHNLPDrYD3hztA8yKoxP"
+      },
+      {
+        "name": "Quebonafide",
+        "uri": "spotify:artist:1fxbULcd6ryMNc1usHoP0R"
+      },
+      {
+        "name": "Taco Hemingway",
+        "uri": "spotify:artist:7CJgLPEqiIRuneZSolpawQ"
+      }
+    ],
+    "metadata": {
+      "collection.can_ban": "true",
+      "view_index": "7",
+      "collection.is_banned": "false",
+      "collection.can_add": "true",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "album_track_count": "0",
+      "image_large_url": "spotify:image:ab67616d0000b273782b55df98a6e225d2df274c",
+      "track_player": "audio",
+      "artist_uri": "spotify:artist:5vgHNLPDrYD3hztA8yKoxP",
+      "screen_recording_enabled": "true",
+      "album_disc_count": "1",
+      "time_of_day_vector_cosine_sim": "0.93587494",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "artist_name:1": "Quebonafide",
+      "score": "0.93587494",
+      "title": "8 kobiet",
+      "album_artist_name": "TACONAFIDE",
+      "image_small_url": "spotify:image:ab67616d00004851782b55df98a6e225d2df274c",
+      "artist_name": "TACONAFIDE",
+      "actions.skipping_prev_past_track": "resume",
+      "time_of_day_vector_distance": "0.06412506",
+      "artist_uri:2": "spotify:artist:7CJgLPEqiIRuneZSolpawQ",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273782b55df98a6e225d2df274c",
+      "collection.in_collection": "false",
+      "iteration": "0",
+      "marked_for_download": "false",
+      "actions.skipping_next_past_track": "resume",
+      "popularity": "61",
+      "album_disc_number": "1",
+      "context_repetition_penalty": "0.0",
+      "album_track_number": "8",
+      "has_lyrics": "true",
+      "artist_name:2": "Taco Hemingway",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "image_url": "spotify:image:ab67616d00001e02782b55df98a6e225d2df274c",
+      "album_title": "Soma 0,5 mg",
+      "duration": "199000",
+      "artist_uri:1": "spotify:artist:1fxbULcd6ryMNc1usHoP0R",
+      "album_uri": "spotify:album:7sFTg1OTqCzmDykyrlQi8D"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02782b55df98a6e225d2df274c"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851782b55df98a6e225d2df274c"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273782b55df98a6e225d2df274c"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273782b55df98a6e225d2df274c"
+      }
+    ],
+    "listenDate": 1784288293359,
+    "dateFinalized": false
+  },
+  {
+    "uid": "30633261366238633038336462316637",
+    "uri": "spotify:track:059zfgJ92HHaX1JLKRIxyd",
+    "name": "Ogrody Po Blantach",
+    "duration": {
+      "milliseconds": 146000
+    },
+    "album": {
+      "uri": "spotify:album:6aQEubDnxHnjMDynYowenR",
+      "name": "Ogrody Mixtape"
+    },
+    "artists": [
+      {
+        "name": "Kukon",
+        "uri": "spotify:artist:3U5Oag04Yl2WnvPULOlsMD"
+      }
+    ],
+    "metadata": {
+      "album_disc_count": "1",
+      "score": "0.93340206",
+      "has_lyrics": "true",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "actions.skipping_next_past_track": "resume",
+      "image_large_url": "spotify:image:ab67616d0000b2736e79719dca0fc9ae86f67c9c",
+      "artist_uri": "spotify:artist:3U5Oag04Yl2WnvPULOlsMD",
+      "is_explicit": "true",
+      "iteration": "0",
+      "album_title": "Ogrody Mixtape",
+      "screen_recording_enabled": "true",
+      "album_artist_name": "Kukon",
+      "collection.can_add": "true",
+      "album_disc_number": "1",
+      "album_track_number": "6",
+      "image_url": "spotify:image:ab67616d00001e026e79719dca0fc9ae86f67c9c",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "view_index": "8",
+      "collection.is_banned": "false",
+      "popularity": "51",
+      "title": "Ogrody Po Blantach",
+      "album_uri": "spotify:album:6aQEubDnxHnjMDynYowenR",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "time_of_day_vector_cosine_sim": "0.93340206",
+      "duration": "146000",
+      "marked_for_download": "false",
+      "collection.in_collection": "false",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2736e79719dca0fc9ae86f67c9c",
+      "time_of_day_vector_distance": "0.06659794",
+      "context_repetition_penalty": "0.0",
+      "collection.can_ban": "true",
+      "image_small_url": "spotify:image:ab67616d000048516e79719dca0fc9ae86f67c9c",
+      "artist_name": "Kukon",
+      "album_track_count": "0",
+      "actions.skipping_prev_past_track": "resume",
+      "track_player": "audio"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e026e79719dca0fc9ae86f67c9c"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048516e79719dca0fc9ae86f67c9c"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2736e79719dca0fc9ae86f67c9c"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2736e79719dca0fc9ae86f67c9c"
+      }
+    ],
+    "listenDate": 1784288492621,
+    "dateFinalized": false
+  },
+  {
+    "uid": "37396238393266333831666265613239",
+    "uri": "spotify:track:30kGYBObLtcy3B1kLORwxV",
+    "name": "DMT",
+    "duration": {
+      "milliseconds": 249000
+    },
+    "album": {
+      "uri": "spotify:album:0rzdl357j4uerHr94ge2JJ",
+      "name": "To ziomal"
+    },
+    "artists": [
+      {
+        "name": "Żabson",
+        "uri": "spotify:artist:0QR764k0D36npmTMWx5bft"
+      }
+    ],
+    "metadata": {
+      "actions.skipping_next_past_track": "resume",
+      "album_track_number": "10",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "image_xlarge_url": "spotify:image:ab67616d0000b27322cbfb973e745f62554a853b",
+      "image_url": "spotify:image:ab67616d00001e0222cbfb973e745f62554a853b",
+      "marked_for_download": "false",
+      "album_uri": "spotify:album:0rzdl357j4uerHr94ge2JJ",
+      "album_disc_number": "1",
+      "album_title": "To ziomal",
+      "iteration": "0",
+      "score": "0.93148994",
+      "has_lyrics": "true",
+      "artist_uri": "spotify:artist:0QR764k0D36npmTMWx5bft",
+      "album_artist_name": "Żabson",
+      "image_large_url": "spotify:image:ab67616d0000b27322cbfb973e745f62554a853b",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "popularity": "50",
+      "album_disc_count": "1",
+      "view_index": "9",
+      "track_player": "audio",
+      "duration": "249000",
+      "context_repetition_penalty": "0.0",
+      "artist_name": "Żabson",
+      "collection.is_banned": "false",
+      "collection.in_collection": "false",
+      "time_of_day_vector_distance": "0.068510056",
+      "collection.can_ban": "true",
+      "time_of_day_vector_cosine_sim": "0.93148994",
+      "album_track_count": "15",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "screen_recording_enabled": "true",
+      "title": "DMT",
+      "actions.skipping_prev_past_track": "resume",
+      "collection.can_add": "true",
+      "image_small_url": "spotify:image:ab67616d0000485122cbfb973e745f62554a853b"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e0222cbfb973e745f62554a853b"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d0000485122cbfb973e745f62554a853b"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b27322cbfb973e745f62554a853b"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b27322cbfb973e745f62554a853b"
+      }
+    ],
+    "listenDate": 1784291551645,
+    "dateFinalized": false
+  },
+  {
+    "uid": "38336139313831363332363636303131",
+    "uri": "spotify:track:47nfPnjcMZzga5CBAZouuC",
+    "name": "KOSMITA",
+    "duration": {
+      "milliseconds": 200000
+    },
+    "album": {
+      "uri": "spotify:album:0pl0nNAIyGzhpArs5ctLty",
+      "name": "BOHEMA"
+    },
+    "artists": [
+      {
+        "name": "Gedz",
+        "uri": "spotify:artist:1MZ1TtfmzMHEYIlynXsr1a"
+      },
+      {
+        "name": "Sokos",
+        "uri": "spotify:artist:74BcHC0oHVSwJySCVT8pz7"
+      },
+      {
+        "name": "808Bros",
+        "uri": "spotify:artist:44DGXC4Jy2OEik8LhoHjFg"
+      }
+    ],
+    "metadata": {
+      "title": "KOSMITA",
+      "view_index": "10",
+      "artist_uri:1": "spotify:artist:74BcHC0oHVSwJySCVT8pz7",
+      "has_lyrics": "true",
+      "entity_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "canvas.canvasUri": "spotify:canvas:1VGd5s9uKUX1FCszmHf8pK",
+      "score": "0.92800426",
+      "album_disc_count": "1",
+      "decision_id": "ssp~0656caf0677841b6f691e37e1f24061c2866",
+      "collection.can_add": "true",
+      "canvas.artist.name": "Gedz",
+      "popularity": "50",
+      "canvas.explicit": "false",
+      "context_uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "album_artist_name": "Gedz",
+      "album_track_number": "10",
+      "collection.in_collection": "false",
+      "track_player": "audio",
+      "canvas.type": "VIDEO_LOOPING_RANDOM",
+      "canvas.fileId": "436ddd8134e037f990cefc5a3b52bdab",
+      "canvas.entityUri": "spotify:track:47nfPnjcMZzga5CBAZouuC",
+      "artist_name:1": "Sokos",
+      "canvas.artist.avatar": "https://i.scdn.co/image/ab6761610000f178451457d6ae3e77b6f9125150",
+      "collection.can_ban": "true",
+      "iteration": "0",
+      "artist_uri:2": "spotify:artist:44DGXC4Jy2OEik8LhoHjFg",
+      "context_repetition_penalty": "0.0",
+      "duration": "200000",
+      "canvas.id": "3f6cbd8a0df443cea9306db8f6db9594",
+      "marked_for_download": "false",
+      "album_track_count": "0",
+      "canvas.url": "https://canvaz.scdn.co/upload/artist/1MZ1TtfmzMHEYIlynXsr1a/video/3f6cbd8a0df443cea9306db8f6db9594.cnvs.mp4",
+      "image_url": "spotify:image:ab67616d00001e024f9368dd887e9d4c00ee9aed",
+      "screen_recording_enabled": "true",
+      "album_title": "BOHEMA",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2734f9368dd887e9d4c00ee9aed",
+      "artist_name": "Gedz",
+      "canvas.uploadedBy": "artist",
+      "actions.skipping_prev_past_track": "resume",
+      "artist_name:2": "808Bros",
+      "is_explicit": "true",
+      "artist_uri": "spotify:artist:1MZ1TtfmzMHEYIlynXsr1a",
+      "album_disc_number": "1",
+      "collection.is_banned": "false",
+      "actions.skipping_next_past_track": "resume",
+      "time_of_day_vector_cosine_sim": "0.92800426",
+      "image_small_url": "spotify:image:ab67616d000048514f9368dd887e9d4c00ee9aed",
+      "canvas.artist.uri": "spotify:artist:1MZ1TtfmzMHEYIlynXsr1a",
+      "image_large_url": "spotify:image:ab67616d0000b2734f9368dd887e9d4c00ee9aed",
+      "time_of_day_vector_distance": "0.071995735",
+      "album_uri": "spotify:album:0pl0nNAIyGzhpArs5ctLty"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e024f9368dd887e9d4c00ee9aed"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048514f9368dd887e9d4c00ee9aed"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2734f9368dd887e9d4c00ee9aed"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2734f9368dd887e9d4c00ee9aed"
+      }
+    ],
+    "listenDate": 1784291800955,
+    "dateFinalized": false
+  },
+  {
+    "uid": "66633130393930353839366237653363",
+    "uri": "spotify:track:0aIvX3NBfMdvNfWNcaF36F",
+    "name": "NIE WIDZISZ",
+    "duration": {
+      "milliseconds": 119000
+    },
+    "album": {
+      "uri": "spotify:album:2NHRLGmtCBHWQOkjxRhdeQ",
+      "name": "NIE WIDZISZ"
+    },
+    "artists": [
+      {
+        "name": "27.Fuckdemons",
+        "uri": "spotify:artist:2FhI5QfUYl5iIlUog9HHEw"
+      }
+    ],
+    "metadata": {
+      "image_xlarge_url": "spotify:image:ab67616d0000b27389429eb95f60d0b62326fa9a",
+      "view_index": "0",
+      "collection.can_ban": "true",
+      "album_disc_number": "1",
+      "album_track_number": "1",
+      "context_uri": "spotify:playlist:37i9dQZF1E38MdO8MKJzad",
+      "album_disc_count": "0",
+      "title": "NIE WIDZISZ",
+      "image_url": "spotify:image:ab67616d00001e0289429eb95f60d0b62326fa9a",
+      "actions.skipping_next_past_track": "resume",
+      "artist_name": "27.Fuckdemons",
+      "entity_uri": "spotify:playlist:37i9dQZF1E38MdO8MKJzad",
+      "duration": "119000",
+      "collection.can_add": "true",
+      "album_title": "NIE WIDZISZ",
+      "album_track_count": "0",
+      "album_uri": "spotify:album:2NHRLGmtCBHWQOkjxRhdeQ",
+      "collection.in_collection": "false",
+      "popularity": "37",
+      "collection.is_banned": "false",
+      "album_artist_name": "27.Fuckdemons",
+      "marked_for_download": "false",
+      "has_lyrics": "true",
+      "image_small_url": "spotify:image:ab67616d0000485189429eb95f60d0b62326fa9a",
+      "image_large_url": "spotify:image:ab67616d0000b27389429eb95f60d0b62326fa9a",
+      "is_explicit": "true",
+      "decision_id": "ssp~0656c821a2179b38c99e263b370bbae86f77",
+      "track_player": "audio",
+      "artist_uri": "spotify:artist:2FhI5QfUYl5iIlUog9HHEw",
+      "actions.skipping_prev_past_track": "resume",
+      "iteration": "0"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e0289429eb95f60d0b62326fa9a"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d0000485189429eb95f60d0b62326fa9a"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b27389429eb95f60d0b62326fa9a"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b27389429eb95f60d0b62326fa9a"
+      }
+    ],
+    "listenDate": 1784291868934,
+    "dateFinalized": false
+  },
+  {
+    "uid": "64353962626330366638353735636235",
+    "uri": "spotify:track:2DZtoF8RU9ZYaaWBURhqlZ",
+    "name": "Czerwony Rum",
+    "duration": {
+      "milliseconds": 192000
+    },
+    "album": {
+      "uri": "spotify:album:29EsnOYQvnX9juNvq6OPWq",
+      "name": "Redrum"
+    },
+    "artists": [
+      {
+        "name": "Słoń",
+        "uri": "spotify:artist:0wm6v5GU6VbR1wtsm0YiTV"
+      },
+      {
+        "name": "Chris Carson",
+        "uri": "spotify:artist:0gvoKJbY0q97HgBvPRmjMW"
+      }
+    ],
+    "metadata": {
+      "marked_for_download": "false",
+      "album_disc_number": "1",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2735f0b19993a6f1efb6385657e",
+      "artist_name": "Słoń",
+      "actions.skipping_next_past_track": "resume",
+      "album_track_number": "2",
+      "artist_uri:1": "spotify:artist:0gvoKJbY0q97HgBvPRmjMW",
+      "iteration": "0",
+      "album_uri": "spotify:album:29EsnOYQvnX9juNvq6OPWq",
+      "image_small_url": "spotify:image:ab67616d000048515f0b19993a6f1efb6385657e",
+      "popularity": "59",
+      "artist_name:1": "Chris Carson",
+      "duration": "192000",
+      "actions.skipping_prev_past_track": "resume",
+      "artist_uri": "spotify:artist:0wm6v5GU6VbR1wtsm0YiTV",
+      "has_lyrics": "true",
+      "image_large_url": "spotify:image:ab67616d0000b2735f0b19993a6f1efb6385657e",
+      "album_disc_count": "0",
+      "view_index": "0",
+      "album_artist_name": "Słoń",
+      "album_track_count": "0",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "collection.can_add": "true",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "is_explicit": "true",
+      "image_url": "spotify:image:ab67616d00001e025f0b19993a6f1efb6385657e",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "collection.in_collection": "true",
+      "collection.can_ban": "true",
+      "collection.is_banned": "false",
+      "title": "Czerwony Rum",
+      "track_player": "audio",
+      "album_title": "Redrum"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e025f0b19993a6f1efb6385657e"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048515f0b19993a6f1efb6385657e"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2735f0b19993a6f1efb6385657e"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2735f0b19993a6f1efb6385657e"
+      }
+    ],
+    "listenDate": 1784291879811,
+    "dateFinalized": false
+  },
+  {
+    "uid": "39333137346436396266333062616265",
+    "uri": "spotify:track:1koe87P9GUj9jzitVVvi0Q",
+    "name": "Bogini",
+    "duration": {
+      "milliseconds": 262000
+    },
+    "album": {
+      "uri": "spotify:album:4yIytvXDK0ZIIU2W4fnABJ",
+      "name": "Dla fanek euforii"
+    },
+    "artists": [
+      {
+        "name": "Quebonafide",
+        "uri": "spotify:artist:1fxbULcd6ryMNc1usHoP0R"
+      }
+    ],
+    "metadata": {
+      "duration": "262000",
+      "actions.skipping_next_past_track": "resume",
+      "album_disc_number": "1",
+      "album_artist_name": "Quebonafide",
+      "collection.can_add": "true",
+      "album_track_number": "1",
+      "album_title": "Dla fanek euforii",
+      "collection.can_ban": "true",
+      "artist_name": "Quebonafide",
+      "track_player": "audio",
+      "view_index": "1",
+      "actions.skipping_prev_past_track": "resume",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "album_disc_count": "1",
+      "title": "Bogini",
+      "image_large_url": "spotify:image:ab67616d0000b273af188896272d311de3d6f387",
+      "collection.is_banned": "false",
+      "popularity": "63",
+      "iteration": "0",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "album_track_count": "0",
+      "collection.in_collection": "false",
+      "album_uri": "spotify:album:4yIytvXDK0ZIIU2W4fnABJ",
+      "artist_uri": "spotify:artist:1fxbULcd6ryMNc1usHoP0R",
+      "image_small_url": "spotify:image:ab67616d00004851af188896272d311de3d6f387",
+      "image_url": "spotify:image:ab67616d00001e02af188896272d311de3d6f387",
+      "has_lyrics": "true",
+      "marked_for_download": "false",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273af188896272d311de3d6f387",
+      "screen_recording_enabled": "true",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02af188896272d311de3d6f387"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851af188896272d311de3d6f387"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273af188896272d311de3d6f387"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273af188896272d311de3d6f387"
+      }
+    ],
+    "listenDate": 1784292072081,
+    "dateFinalized": false
+  },
+  {
+    "uid": "34323437336666396639383866386638",
+    "uri": "spotify:track:54HoJi9KbLiFk1sGUQT5NJ",
+    "name": "Wschód (lubię zapierdalać)",
+    "duration": {
+      "milliseconds": 249000
+    },
+    "album": {
+      "uri": "spotify:album:0zqVGKhttQF25HwPeNcknO",
+      "name": "Opowieści z Doliny Smoków"
+    },
+    "artists": [
+      {
+        "name": "Bedoes 2115",
+        "uri": "spotify:artist:0LX2VNf5w4iOHW1yyIqb74"
+      },
+      {
+        "name": "Lanek",
+        "uri": "spotify:artist:7afPAbg5jb45KFUSnHIMFG"
+      },
+      {
+        "name": "Kosa",
+        "uri": "spotify:artist:2ePgEQHzJJkNTLb2Q95Eh5"
+      },
+      {
+        "name": "White 2115",
+        "uri": "spotify:artist:4nPxrGG7k7aEKmNLsfX4cd"
+      }
+    ],
+    "metadata": {
+      "image_small_url": "spotify:image:ab67616d0000485159e74c28175cee9a5d50e39f",
+      "artist_name:1": "Lanek",
+      "artist_uri:1": "spotify:artist:7afPAbg5jb45KFUSnHIMFG",
+      "marked_for_download": "false",
+      "collection.can_add": "true",
+      "iteration": "0",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "artist_uri": "spotify:artist:0LX2VNf5w4iOHW1yyIqb74",
+      "duration": "249000",
+      "actions.skipping_prev_past_track": "resume",
+      "track_player": "audio",
+      "actions.skipping_next_past_track": "resume",
+      "artist_uri:2": "spotify:artist:2ePgEQHzJJkNTLb2Q95Eh5",
+      "screen_recording_enabled": "true",
+      "collection.in_collection": "false",
+      "album_track_count": "0",
+      "image_large_url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f",
+      "album_track_number": "5",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "collection.can_ban": "true",
+      "album_artist_name": "Bedoes 2115",
+      "has_lyrics": "true",
+      "image_xlarge_url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f",
+      "popularity": "66",
+      "album_uri": "spotify:album:0zqVGKhttQF25HwPeNcknO",
+      "artist_name": "Bedoes 2115",
+      "artist_name:2": "Kosa",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "image_url": "spotify:image:ab67616d00001e0259e74c28175cee9a5d50e39f",
+      "album_disc_count": "1",
+      "album_title": "Opowieści z Doliny Smoków",
+      "artist_name:3": "White 2115",
+      "artist_uri:3": "spotify:artist:4nPxrGG7k7aEKmNLsfX4cd",
+      "view_index": "2",
+      "collection.is_banned": "false",
+      "album_disc_number": "1",
+      "title": "Wschód (lubię zapierdalać)"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e0259e74c28175cee9a5d50e39f"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d0000485159e74c28175cee9a5d50e39f"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f"
+      }
+    ],
+    "listenDate": 1784292334777,
+    "dateFinalized": false
+  },
+  {
+    "uid": "32356132326466666131366334323161",
+    "uri": "spotify:track:4D1WCoYhGYBkidpLoGZiAD",
+    "name": "Skrable",
+    "duration": {
+      "milliseconds": 244000
+    },
+    "album": {
+      "uri": "spotify:album:2KP6z31HQChZVDzpeurU2i",
+      "name": "Art Brut 2"
+    },
+    "artists": [
+      {
+        "name": "PRO8L3M",
+        "uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7"
+      }
+    ],
+    "metadata": {
+      "actions.skipping_prev_past_track": "resume",
+      "has_lyrics": "true",
+      "screen_recording_enabled": "true",
+      "image_url": "spotify:image:ab67616d00001e02fb3398aedf5d9382a1ef5540",
+      "title": "Skrable",
+      "popularity": "66",
+      "associated_video_id": "2692771e8dd4422aaa5b31d104a9c766",
+      "iteration": "0",
+      "album_uri": "spotify:album:2KP6z31HQChZVDzpeurU2i",
+      "marked_for_download": "false",
+      "album_artist_name": "PRO8L3M",
+      "artist_name": "PRO8L3M",
+      "image_large_url": "spotify:image:ab67616d0000b273fb3398aedf5d9382a1ef5540",
+      "duration": "244000",
+      "view_index": "3",
+      "collection.can_add": "true",
+      "album_disc_number": "1",
+      "album_disc_count": "1",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273fb3398aedf5d9382a1ef5540",
+      "collection.is_banned": "false",
+      "album_title": "Art Brut 2",
+      "album_track_count": "0",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "artist_uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7",
+      "track_player": "audio",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "actions.skipping_next_past_track": "resume",
+      "collection.can_ban": "true",
+      "collection.in_collection": "false",
+      "image_small_url": "spotify:image:ab67616d00004851fb3398aedf5d9382a1ef5540",
+      "album_track_number": "15"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02fb3398aedf5d9382a1ef5540"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851fb3398aedf5d9382a1ef5540"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273fb3398aedf5d9382a1ef5540"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273fb3398aedf5d9382a1ef5540"
+      }
+    ],
+    "listenDate": 1784292584351,
+    "dateFinalized": false
+  },
+  {
+    "uid": "64623134396561633438383763306435",
+    "uri": "spotify:track:4eNKssDPD3UIDbSvbmLCXZ",
+    "name": "100 dni do matury",
+    "duration": {
+      "milliseconds": 302000
+    },
+    "album": {
+      "uri": "spotify:album:4cA2a9w1gSzJEIdbhwUrsH",
+      "name": "100 dni do matury"
+    },
+    "artists": [
+      {
+        "name": "Mata",
+        "uri": "spotify:artist:0MIG6gMcQTSvFbKvUwK0id"
+      },
+      {
+        "name": "Ezra Williams",
+        "uri": "spotify:artist:0vNuaHjk7DINrw3iRkYs48"
+      },
+      {
+        "name": "Sarcastic Sounds",
+        "uri": "spotify:artist:4RjfmBZznj6JLBG3CoPAh4"
+      }
+    ],
+    "metadata": {
+      "collection.is_banned": "false",
+      "duration": "302000",
+      "track_player": "audio",
+      "artist_name:2": "Sarcastic Sounds",
+      "album_title": "100 dni do matury",
+      "collection.in_collection": "false",
+      "collection.can_add": "true",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "artist_uri:1": "spotify:artist:0vNuaHjk7DINrw3iRkYs48",
+      "album_track_count": "0",
+      "artist_name": "Mata",
+      "popularity": "63",
+      "album_disc_count": "1",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "marked_for_download": "false",
+      "screen_recording_enabled": "true",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273a0bddede36c718a8f58b33ae",
+      "artist_name:1": "Ezra Williams",
+      "album_disc_number": "1",
+      "title": "100 dni do matury",
+      "image_small_url": "spotify:image:ab67616d00004851a0bddede36c718a8f58b33ae",
+      "collection.can_ban": "true",
+      "actions.skipping_next_past_track": "resume",
+      "album_track_number": "16",
+      "has_lyrics": "true",
+      "actions.skipping_prev_past_track": "resume",
+      "album_artist_name": "Mata",
+      "image_large_url": "spotify:image:ab67616d0000b273a0bddede36c718a8f58b33ae",
+      "artist_uri": "spotify:artist:0MIG6gMcQTSvFbKvUwK0id",
+      "artist_uri:2": "spotify:artist:4RjfmBZznj6JLBG3CoPAh4",
+      "iteration": "0",
+      "album_uri": "spotify:album:4cA2a9w1gSzJEIdbhwUrsH",
+      "image_url": "spotify:image:ab67616d00001e02a0bddede36c718a8f58b33ae",
+      "view_index": "4"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02a0bddede36c718a8f58b33ae"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851a0bddede36c718a8f58b33ae"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273a0bddede36c718a8f58b33ae"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273a0bddede36c718a8f58b33ae"
+      }
+    ],
+    "listenDate": 1784292828398,
+    "dateFinalized": false
+  },
+  {
+    "uid": "63353564356264623764636637633236",
+    "uri": "spotify:track:1MBINKJrTx9VApRSoQMR8b",
+    "name": "nóż motylkowy",
+    "duration": {
+      "milliseconds": 176000
+    },
+    "album": {
+      "uri": "spotify:album:5pEyFfIh3cruUMhecU4G9i",
+      "name": "Deathcore"
+    },
+    "artists": [
+      {
+        "name": "Chivas",
+        "uri": "spotify:artist:1fZAAHNWdSM5gqbi9o5iEA"
+      },
+      {
+        "name": "White 2115",
+        "uri": "spotify:artist:4nPxrGG7k7aEKmNLsfX4cd"
+      }
+    ],
+    "metadata": {
+      "screen_recording_enabled": "true",
+      "duration": "176000",
+      "collection.can_ban": "true",
+      "actions.skipping_next_past_track": "resume",
+      "album_uri": "spotify:album:5pEyFfIh3cruUMhecU4G9i",
+      "artist_uri:1": "spotify:artist:4nPxrGG7k7aEKmNLsfX4cd",
+      "image_url": "spotify:image:ab67616d00001e02059744a43fb9a1a81eb2cff9",
+      "view_index": "5",
+      "track_player": "audio",
+      "album_disc_count": "1",
+      "album_title": "Deathcore",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "album_track_count": "0",
+      "album_artist_name": "Chivas",
+      "album_disc_number": "1",
+      "has_lyrics": "true",
+      "artist_name": "Chivas",
+      "image_small_url": "spotify:image:ab67616d00004851059744a43fb9a1a81eb2cff9",
+      "collection.is_banned": "false",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "marked_for_download": "false",
+      "image_large_url": "spotify:image:ab67616d0000b273059744a43fb9a1a81eb2cff9",
+      "iteration": "0",
+      "actions.skipping_prev_past_track": "resume",
+      "artist_uri": "spotify:artist:1fZAAHNWdSM5gqbi9o5iEA",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273059744a43fb9a1a81eb2cff9",
+      "collection.in_collection": "false",
+      "popularity": "52",
+      "collection.can_add": "true",
+      "is_explicit": "true",
+      "title": "nóż motylkowy",
+      "album_track_number": "7",
+      "artist_name:1": "White 2115",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02059744a43fb9a1a81eb2cff9"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851059744a43fb9a1a81eb2cff9"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273059744a43fb9a1a81eb2cff9"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273059744a43fb9a1a81eb2cff9"
+      }
+    ],
+    "listenDate": 1784293130603,
+    "dateFinalized": false
+  },
+  {
+    "uid": "34386331636561393534396335316638",
+    "uri": "spotify:track:3LSlLG47TI0e2pF4lnIIsr",
+    "name": "Płuca zlepione topami",
+    "duration": {
+      "milliseconds": 301000
+    },
+    "album": {
+      "uri": "spotify:album:61qQ2B6m2f2QnDSdapHjbC",
+      "name": "EVIL_THINGS"
+    },
+    "artists": [
+      {
+        "name": "Guzior",
+        "uri": "spotify:artist:7uWyXPJ04ihdQdYGGw3xVV"
+      }
+    ],
+    "metadata": {
+      "album_title": "EVIL_THINGS",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "image_small_url": "spotify:image:ab67616d00004851266a315a69cc87eaecf26cba",
+      "iteration": "0",
+      "album_artist_name": "Guzior",
+      "title": "Płuca zlepione topami",
+      "album_disc_number": "1",
+      "actions.skipping_next_past_track": "resume",
+      "image_url": "spotify:image:ab67616d00001e02266a315a69cc87eaecf26cba",
+      "collection.is_banned": "false",
+      "album_track_number": "4",
+      "album_track_count": "0",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273266a315a69cc87eaecf26cba",
+      "image_large_url": "spotify:image:ab67616d0000b273266a315a69cc87eaecf26cba",
+      "artist_name": "Guzior",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "associated_video_id": "c9ce9c44946f4144b5a8f917f71add14",
+      "screen_recording_enabled": "true",
+      "collection.in_collection": "false",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "is_explicit": "true",
+      "collection.can_ban": "true",
+      "track_player": "audio",
+      "actions.skipping_prev_past_track": "resume",
+      "marked_for_download": "false",
+      "duration": "301000",
+      "album_uri": "spotify:album:61qQ2B6m2f2QnDSdapHjbC",
+      "artist_uri": "spotify:artist:7uWyXPJ04ihdQdYGGw3xVV",
+      "view_index": "6",
+      "popularity": "60",
+      "collection.can_add": "true",
+      "album_disc_count": "1",
+      "has_lyrics": "true"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02266a315a69cc87eaecf26cba"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851266a315a69cc87eaecf26cba"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273266a315a69cc87eaecf26cba"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273266a315a69cc87eaecf26cba"
+      }
+    ],
+    "listenDate": 1784293307070,
+    "dateFinalized": false
+  },
+  {
+    "uid": "31626339633964663130613937633965",
+    "uri": "spotify:track:1x6whiWHJmvHM8jeloliXq",
+    "name": "Chodź",
+    "duration": {
+      "milliseconds": 209000
+    },
+    "album": {
+      "uri": "spotify:album:4JoIRj35Bd74pT9PGDUeAQ",
+      "name": "Szprycer"
+    },
+    "artists": [
+      {
+        "name": "Taco Hemingway",
+        "uri": "spotify:artist:7CJgLPEqiIRuneZSolpawQ"
+      },
+      {
+        "name": "Zeppy Zep",
+        "uri": "spotify:artist:2hnyMG1DuXarlHFJDITc3n"
+      }
+    ],
+    "metadata": {
+      "is_explicit": "true",
+      "screen_recording_enabled": "true",
+      "collection.can_ban": "true",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273a81fe5662adfcf6601b6d76b",
+      "artist_uri": "spotify:artist:7CJgLPEqiIRuneZSolpawQ",
+      "collection.is_banned": "false",
+      "duration": "209000",
+      "artist_name:1": "Zeppy Zep",
+      "actions.skipping_next_past_track": "resume",
+      "iteration": "0",
+      "album_disc_count": "1",
+      "marked_for_download": "false",
+      "popularity": "60",
+      "album_track_number": "2",
+      "album_artist_name": "Taco Hemingway",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "album_title": "Szprycer",
+      "artist_uri:1": "spotify:artist:2hnyMG1DuXarlHFJDITc3n",
+      "has_lyrics": "true",
+      "image_url": "spotify:image:ab67616d00001e02a81fe5662adfcf6601b6d76b",
+      "collection.in_collection": "false",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "image_small_url": "spotify:image:ab67616d00004851a81fe5662adfcf6601b6d76b",
+      "actions.skipping_prev_past_track": "resume",
+      "album_disc_number": "1",
+      "track_player": "audio",
+      "view_index": "7",
+      "album_track_count": "0",
+      "album_uri": "spotify:album:4JoIRj35Bd74pT9PGDUeAQ",
+      "collection.can_add": "true",
+      "image_large_url": "spotify:image:ab67616d0000b273a81fe5662adfcf6601b6d76b",
+      "title": "Chodź",
+      "artist_name": "Taco Hemingway"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02a81fe5662adfcf6601b6d76b"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851a81fe5662adfcf6601b6d76b"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273a81fe5662adfcf6601b6d76b"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273a81fe5662adfcf6601b6d76b"
+      }
+    ],
+    "listenDate": 1784293608946,
+    "dateFinalized": false
+  },
+  {
+    "uid": "65356636626361303234363135333661",
+    "uri": "spotify:track:6Jwix2f7lMMhN1TKsDiL5c",
+    "name": "WEEKEND 2115",
+    "duration": {
+      "milliseconds": 171000
+    },
+    "album": {
+      "uri": "spotify:album:1GabBOxzyUPjkELZE0b3HS",
+      "name": "RODZINNY BIZNES"
+    },
+    "artists": [
+      {
+        "name": "2115",
+        "uri": "spotify:artist:3rnzk5HZE15IjAp0yiP41m"
+      },
+      {
+        "name": "Bedoes 2115",
+        "uri": "spotify:artist:0LX2VNf5w4iOHW1yyIqb74"
+      },
+      {
+        "name": "kuqe 2115",
+        "uri": "spotify:artist:2FtYzWBUVhZ2vfy8S207Zf"
+      },
+      {
+        "name": "White 2115",
+        "uri": "spotify:artist:4nPxrGG7k7aEKmNLsfX4cd"
+      },
+      {
+        "name": "Blacha 2115",
+        "uri": "spotify:artist:71tiWMKZ5wpl6E0BdwVQza"
+      },
+      {
+        "name": "Flexxy 2115",
+        "uri": "spotify:artist:56znIsN2NyCMzIctR2xknQ"
+      }
+    ],
+    "metadata": {
+      "canvas.artist.uri": "spotify:artist:3rnzk5HZE15IjAp0yiP41m",
+      "album_uri": "spotify:album:1GabBOxzyUPjkELZE0b3HS",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "image_large_url": "spotify:image:ab67616d0000b273796d2a5e45a8495aeeff3da6",
+      "collection.in_collection": "false",
+      "title": "WEEKEND 2115",
+      "view_index": "8",
+      "canvas.fileId": "1f28b2b16d6a3945a3e0d69428f17a2b",
+      "collection.is_banned": "false",
+      "canvas.url": "https://canvaz.scdn.co/upload/licensor/7JGwF0zhX9oItt9901OvB5/video/5d7c767998f44660b86630c67196ab8a.cnvs.mp4",
+      "actions.skipping_next_past_track": "resume",
+      "album_artist_name": "2115",
+      "canvas.artist.avatar": "https://i.scdn.co/image/ab6761610000f178d5af179641d8f5ee1fa74c1a",
+      "artist_name:2": "kuqe 2115",
+      "album_track_count": "0",
+      "artist_name:3": "White 2115",
+      "collection.can_ban": "true",
+      "album_disc_count": "2",
+      "canvas.id": "5d7c767998f44660b86630c67196ab8a",
+      "track_player": "audio",
+      "collection.can_add": "true",
+      "actions.skipping_prev_past_track": "resume",
+      "artist_name:4": "Blacha 2115",
+      "screen_recording_enabled": "true",
+      "image_url": "spotify:image:ab67616d00001e02796d2a5e45a8495aeeff3da6",
+      "album_disc_number": "2",
+      "image_small_url": "spotify:image:ab67616d00004851796d2a5e45a8495aeeff3da6",
+      "artist_uri:5": "spotify:artist:56znIsN2NyCMzIctR2xknQ",
+      "album_track_number": "3",
+      "artist_name": "2115",
+      "artist_uri:4": "spotify:artist:71tiWMKZ5wpl6E0BdwVQza",
+      "canvas.uploadedBy": "licensor",
+      "artist_uri:1": "spotify:artist:0LX2VNf5w4iOHW1yyIqb74",
+      "canvas.type": "VIDEO_LOOPING_RANDOM",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "canvas.canvasUri": "spotify:canvas:2QpailXMIjOiUaqRXa07J8",
+      "canvas.artist.name": "2115",
+      "album_title": "RODZINNY BIZNES",
+      "marked_for_download": "false",
+      "has_lyrics": "true",
+      "artist_uri": "spotify:artist:3rnzk5HZE15IjAp0yiP41m",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273796d2a5e45a8495aeeff3da6",
+      "artist_uri:3": "spotify:artist:4nPxrGG7k7aEKmNLsfX4cd",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "popularity": "60",
+      "is_explicit": "true",
+      "canvas.explicit": "false",
+      "iteration": "0",
+      "artist_uri:2": "spotify:artist:2FtYzWBUVhZ2vfy8S207Zf",
+      "artist_name:5": "Flexxy 2115",
+      "artist_name:1": "Bedoes 2115",
+      "duration": "171000",
+      "canvas.entityUri": "spotify:track:6Jwix2f7lMMhN1TKsDiL5c"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02796d2a5e45a8495aeeff3da6"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851796d2a5e45a8495aeeff3da6"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273796d2a5e45a8495aeeff3da6"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273796d2a5e45a8495aeeff3da6"
+      }
+    ],
+    "listenDate": 1784293818159,
+    "dateFinalized": false
+  },
+  {
+    "uid": "61343363363765346637326463666631",
+    "uri": "spotify:track:6iI7tIGQxk0M7u64cZNwqR",
+    "name": "VOGUE",
+    "duration": {
+      "milliseconds": 218000
+    },
+    "album": {
+      "uri": "spotify:album:0zqVGKhttQF25HwPeNcknO",
+      "name": "Opowieści z Doliny Smoków"
+    },
+    "artists": [
+      {
+        "name": "Bedoes 2115",
+        "uri": "spotify:artist:0LX2VNf5w4iOHW1yyIqb74"
+      },
+      {
+        "name": "Lanek",
+        "uri": "spotify:artist:7afPAbg5jb45KFUSnHIMFG"
+      }
+    ],
+    "metadata": {
+      "album_disc_count": "1",
+      "artist_name:1": "Lanek",
+      "screen_recording_enabled": "true",
+      "collection.can_ban": "true",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "image_large_url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f",
+      "actions.skipping_prev_past_track": "resume",
+      "artist_name": "Bedoes 2115",
+      "view_index": "9",
+      "has_lyrics": "true",
+      "album_disc_number": "1",
+      "image_xlarge_url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f",
+      "artist_uri": "spotify:artist:0LX2VNf5w4iOHW1yyIqb74",
+      "title": "VOGUE",
+      "image_small_url": "spotify:image:ab67616d0000485159e74c28175cee9a5d50e39f",
+      "artist_uri:1": "spotify:artist:7afPAbg5jb45KFUSnHIMFG",
+      "marked_for_download": "false",
+      "duration": "218000",
+      "album_track_count": "0",
+      "album_track_number": "9",
+      "image_url": "spotify:image:ab67616d00001e0259e74c28175cee9a5d50e39f",
+      "album_uri": "spotify:album:0zqVGKhttQF25HwPeNcknO",
+      "album_artist_name": "Bedoes 2115",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "collection.can_add": "true",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "actions.skipping_next_past_track": "resume",
+      "collection.is_banned": "false",
+      "collection.in_collection": "false",
+      "track_player": "audio",
+      "popularity": "65",
+      "iteration": "0",
+      "album_title": "Opowieści z Doliny Smoków"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e0259e74c28175cee9a5d50e39f"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d0000485159e74c28175cee9a5d50e39f"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b27359e74c28175cee9a5d50e39f"
+      }
+    ],
+    "listenDate": 1784293990151,
+    "dateFinalized": false
+  },
+  {
+    "uid": "63303232356133346431366261633834",
+    "uri": "spotify:track:1088WwNMjp0QWvEP3aOgsf",
+    "name": "Molly",
+    "duration": {
+      "milliseconds": 251000
+    },
+    "album": {
+      "uri": "spotify:album:6BMJvX4lhUreGv4n6hC2QI",
+      "name": "PRO8L3M"
+    },
+    "artists": [
+      {
+        "name": "PRO8L3M",
+        "uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7"
+      }
+    ],
+    "metadata": {
+      "collection.in_collection": "false",
+      "artist_uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7",
+      "image_small_url": "spotify:image:ab67616d00004851f6d03dbfb15618ec00e00037",
+      "collection.can_add": "true",
+      "image_url": "spotify:image:ab67616d00001e02f6d03dbfb15618ec00e00037",
+      "popularity": "67",
+      "track_player": "audio",
+      "marked_for_download": "false",
+      "album_track_number": "7",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "collection.is_banned": "false",
+      "screen_recording_enabled": "true",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "artist_name": "PRO8L3M",
+      "actions.skipping_prev_past_track": "resume",
+      "collection.can_ban": "true",
+      "album_uri": "spotify:album:6BMJvX4lhUreGv4n6hC2QI",
+      "iteration": "0",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "image_large_url": "spotify:image:ab67616d0000b273f6d03dbfb15618ec00e00037",
+      "duration": "251000",
+      "album_disc_number": "1",
+      "album_title": "PRO8L3M",
+      "album_disc_count": "1",
+      "view_index": "10",
+      "title": "Molly",
+      "album_artist_name": "PRO8L3M",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273f6d03dbfb15618ec00e00037",
+      "actions.skipping_next_past_track": "resume",
+      "associated_video_id": "d9ad78ff334040ca998c91eca3b2a710",
+      "album_track_count": "0",
+      "has_lyrics": "true"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02f6d03dbfb15618ec00e00037"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851f6d03dbfb15618ec00e00037"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273f6d03dbfb15618ec00e00037"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273f6d03dbfb15618ec00e00037"
+      }
+    ],
+    "listenDate": 1784294208829,
+    "dateFinalized": false
+  },
+  {
+    "uid": "62636431393165663634336564623138",
+    "uri": "spotify:track:3RF2igIVJSCr19izf01C8h",
+    "name": "Przypadkiem",
+    "duration": {
+      "milliseconds": 182000
+    },
+    "album": {
+      "uri": "spotify:album:17ogXGc4j4i2r7rwWea0KS",
+      "name": "OIO"
+    },
+    "artists": [
+      {
+        "name": "OKI",
+        "uri": "spotify:artist:1oxn6cQ37twQ7yGnlE3ETd"
+      },
+      {
+        "name": "Young Igi",
+        "uri": "spotify:artist:1yq2JzsqbzFbJ1B7wGOXLc"
+      },
+      {
+        "name": "Otsochodzi",
+        "uri": "spotify:artist:4zvO09rVUIVTeALhs6xLoB"
+      },
+      {
+        "name": "OIO",
+        "uri": "spotify:artist:5VnJPtvfHh4fPlHDzXjvLP"
+      },
+      {
+        "name": "Michał Anioł",
+        "uri": "spotify:artist:7jIDRyneRCnRsLQyuO91pS"
+      }
+    ],
+    "metadata": {
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "is_explicit": "true",
+      "canvas.explicit": "false",
+      "album_disc_count": "1",
+      "iteration": "0",
+      "artist_name:2": "Otsochodzi",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "actions.skipping_prev_past_track": "resume",
+      "has_lyrics": "true",
+      "image_small_url": "spotify:image:ab67616d00004851b1d89d3903d867cde381dc1c",
+      "view_index": "11",
+      "canvas.canvasUri": "spotify:canvas:2LzvCX6TSvOzQtIDXbtD4z",
+      "image_large_url": "spotify:image:ab67616d0000b273b1d89d3903d867cde381dc1c",
+      "title": "Przypadkiem",
+      "artist_uri": "spotify:artist:1oxn6cQ37twQ7yGnlE3ETd",
+      "canvas.type": "VIDEO_LOOPING_RANDOM",
+      "artist_uri:4": "spotify:artist:7jIDRyneRCnRsLQyuO91pS",
+      "canvas.artist.avatar": "https://i.scdn.co/image/ab6761610000f178cf58c0351bad9700e9aca2bd",
+      "screen_recording_enabled": "true",
+      "actions.skipping_next_past_track": "resume",
+      "canvas.entityUri": "spotify:track:3RF2igIVJSCr19izf01C8h",
+      "marked_for_download": "false",
+      "artist_name": "OKI",
+      "collection.can_add": "true",
+      "track_player": "audio",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "artist_name:4": "Michał Anioł",
+      "canvas.id": "5aecc32a92d94728919aa62e64cd02df",
+      "collection.can_ban": "true",
+      "album_track_number": "10",
+      "image_url": "spotify:image:ab67616d00001e02b1d89d3903d867cde381dc1c",
+      "album_disc_number": "1",
+      "collection.in_collection": "false",
+      "canvas.fileId": "b96376f531c93d658cf2f488d2e71455",
+      "album_track_count": "0",
+      "canvas.uploadedBy": "artist",
+      "collection.is_banned": "false",
+      "album_title": "OIO",
+      "popularity": "65",
+      "album_uri": "spotify:album:17ogXGc4j4i2r7rwWea0KS",
+      "artist_name:3": "OIO",
+      "album_artist_name": "OKI",
+      "canvas.artist.name": "Otsochodzi",
+      "artist_name:1": "Young Igi",
+      "image_xlarge_url": "spotify:image:ab67616d0000b273b1d89d3903d867cde381dc1c",
+      "artist_uri:2": "spotify:artist:4zvO09rVUIVTeALhs6xLoB",
+      "canvas.artist.uri": "spotify:artist:4zvO09rVUIVTeALhs6xLoB",
+      "canvas.url": "https://canvaz.scdn.co/upload/artist/4zvO09rVUIVTeALhs6xLoB/video/5aecc32a92d94728919aa62e64cd02df.cnvs.mp4",
+      "artist_uri:3": "spotify:artist:5VnJPtvfHh4fPlHDzXjvLP",
+      "artist_uri:1": "spotify:artist:1yq2JzsqbzFbJ1B7wGOXLc",
+      "duration": "182000"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e02b1d89d3903d867cde381dc1c"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d00004851b1d89d3903d867cde381dc1c"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b273b1d89d3903d867cde381dc1c"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b273b1d89d3903d867cde381dc1c"
+      }
+    ],
+    "listenDate": 1784294460881,
+    "dateFinalized": false
+  },
+  {
+    "uid": "31653664386165366132323665353666",
+    "uri": "spotify:track:5b7HNNKvhJmZMifol1lAdI",
+    "name": "miałem kolegę bartka",
+    "duration": {
+      "milliseconds": 166000
+    },
+    "album": {
+      "uri": "spotify:album:4r0SGmxQ5XgR5nGyyOiO91",
+      "name": "młody say10"
+    },
+    "artists": [
+      {
+        "name": "Chivas",
+        "uri": "spotify:artist:1fZAAHNWdSM5gqbi9o5iEA"
+      }
+    ],
+    "metadata": {
+      "popularity": "51",
+      "artist_name": "Chivas",
+      "image_large_url": "spotify:image:ab67616d0000b2732ad4907e7a451077946e1f76",
+      "image_url": "spotify:image:ab67616d00001e022ad4907e7a451077946e1f76",
+      "artist_uri": "spotify:artist:1fZAAHNWdSM5gqbi9o5iEA",
+      "collection.is_banned": "false",
+      "collection.can_ban": "true",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "is_explicit": "true",
+      "marked_for_download": "false",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2732ad4907e7a451077946e1f76",
+      "actions.skipping_prev_past_track": "resume",
+      "view_index": "12",
+      "collection.can_add": "true",
+      "has_lyrics": "true",
+      "album_title": "młody say10",
+      "track_player": "audio",
+      "duration": "166000",
+      "album_track_count": "0",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "screen_recording_enabled": "true",
+      "album_artist_name": "Chivas",
+      "iteration": "0",
+      "collection.in_collection": "true",
+      "album_disc_number": "1",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "album_uri": "spotify:album:4r0SGmxQ5XgR5nGyyOiO91",
+      "image_small_url": "spotify:image:ab67616d000048512ad4907e7a451077946e1f76",
+      "title": "miałem kolegę bartka",
+      "actions.skipping_next_past_track": "resume",
+      "album_disc_count": "1",
+      "album_track_number": "6"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e022ad4907e7a451077946e1f76"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048512ad4907e7a451077946e1f76"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2732ad4907e7a451077946e1f76"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2732ad4907e7a451077946e1f76"
+      }
+    ],
+    "listenDate": 1784294643411,
+    "dateFinalized": false
+  },
+  {
+    "uid": "64626339663238623133393136346636",
+    "uri": "spotify:track:2DuifOVYbZwHrG7LHfaEe1",
+    "name": "Napad na bankiet",
+    "duration": {
+      "milliseconds": 288000
+    },
+    "album": {
+      "uri": "spotify:album:6tYtJpN483Vm497XgQcKUq",
+      "name": "Wojtek Sokół"
+    },
+    "artists": [
+      {
+        "name": "Sokół",
+        "uri": "spotify:artist:5Kuxl5ZenCl9fYzmtin6ot"
+      },
+      {
+        "name": "PRO8L3M",
+        "uri": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7"
+      },
+      {
+        "name": "Steez83",
+        "uri": "spotify:artist:4g7qv7lHOtGfUio9BMBE1u"
+      },
+      {
+        "name": "Taco Hemingway",
+        "uri": "spotify:artist:7CJgLPEqiIRuneZSolpawQ"
+      }
+    ],
+    "metadata": {
+      "popularity": "55",
+      "artist_name:2": "Steez83",
+      "canvas.explicit": "false",
+      "has_lyrics": "false",
+      "view_index": "13",
+      "artist_uri:2": "spotify:artist:4g7qv7lHOtGfUio9BMBE1u",
+      "canvas.artist.uri": "spotify:artist:5Kuxl5ZenCl9fYzmtin6ot",
+      "artist_uri:1": "spotify:artist:7v49oVVUhvIQG5EK0jkcF7",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2736faddeab3fc321ef9f091fb3",
+      "canvas.uploadedBy": "artist",
+      "album_track_count": "14",
+      "collection.in_collection": "false",
+      "canvas.id": "5230ed0943874325b695c952cdf36d36",
+      "track_player": "audio",
+      "iteration": "0",
+      "artist_name": "Sokół",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "screen_recording_enabled": "true",
+      "collection.is_banned": "false",
+      "is_explicit": "true",
+      "duration": "288000",
+      "actions.skipping_next_past_track": "resume",
+      "album_title": "Wojtek Sokół",
+      "image_url": "spotify:image:ab67616d00001e026faddeab3fc321ef9f091fb3",
+      "collection.can_ban": "true",
+      "image_large_url": "spotify:image:ab67616d0000b2736faddeab3fc321ef9f091fb3",
+      "canvas.artist.name": "Sokół",
+      "album_artist_name": "Sokół",
+      "canvas.entityUri": "spotify:track:2DuifOVYbZwHrG7LHfaEe1",
+      "album_track_number": "9",
+      "canvas.canvasUri": "spotify:canvas:2v5JgcGNvfRxZDdtKLCCIS",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "canvas.url": "https://canvaz.scdn.co/upload/artist/5Kuxl5ZenCl9fYzmtin6ot/video/5230ed0943874325b695c952cdf36d36.cnvs.mp4",
+      "album_uri": "spotify:album:6tYtJpN483Vm497XgQcKUq",
+      "artist_uri": "spotify:artist:5Kuxl5ZenCl9fYzmtin6ot",
+      "actions.skipping_prev_past_track": "resume",
+      "canvas.fileId": "53bacb1f0c5b39798701f867016d49a3",
+      "marked_for_download": "false",
+      "artist_uri:3": "spotify:artist:7CJgLPEqiIRuneZSolpawQ",
+      "artist_name:3": "Taco Hemingway",
+      "album_disc_number": "1",
+      "canvas.artist.avatar": "https://i.scdn.co/image/ab6761610000f17883ad5f22b99caa5742decfb2",
+      "image_small_url": "spotify:image:ab67616d000048516faddeab3fc321ef9f091fb3",
+      "artist_name:1": "PRO8L3M",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "collection.can_add": "true",
+      "canvas.type": "VIDEO_LOOPING_RANDOM",
+      "title": "Napad na bankiet",
+      "album_disc_count": "1"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e026faddeab3fc321ef9f091fb3"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048516faddeab3fc321ef9f091fb3"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2736faddeab3fc321ef9f091fb3"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2736faddeab3fc321ef9f091fb3"
+      }
+    ],
+    "listenDate": 1784296236658,
+    "dateFinalized": false
+  },
+  {
+    "uid": "33326663396563326361393364373336",
+    "uri": "spotify:track:70OOT6oKBYJeCy7EKxwCms",
+    "name": "2031",
+    "duration": {
+      "milliseconds": 300000
+    },
+    "album": {
+      "uri": "spotify:album:3fG8R9opVLvddvkUQ90feC",
+      "name": "Café Belga"
+    },
+    "artists": [
+      {
+        "name": "Taco Hemingway",
+        "uri": "spotify:artist:7CJgLPEqiIRuneZSolpawQ"
+      },
+      {
+        "name": "Rumak",
+        "uri": "spotify:artist:0SHA3sB1gMMWcphYond5y3"
+      }
+    ],
+    "metadata": {
+      "title": "2031",
+      "track_player": "audio",
+      "album_disc_number": "1",
+      "album_track_number": "5",
+      "collection.in_collection": "false",
+      "collection.can_ban": "true",
+      "image_url": "spotify:image:ab67616d00001e021ae95642444f4103490bead8",
+      "album_artist_name": "Taco Hemingway",
+      "image_xlarge_url": "spotify:image:ab67616d0000b2731ae95642444f4103490bead8",
+      "album_disc_count": "1",
+      "image_small_url": "spotify:image:ab67616d000048511ae95642444f4103490bead8",
+      "album_track_count": "0",
+      "image_large_url": "spotify:image:ab67616d0000b2731ae95642444f4103490bead8",
+      "artist_uri": "spotify:artist:7CJgLPEqiIRuneZSolpawQ",
+      "artist_name:1": "Rumak",
+      "entity_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "screen_recording_enabled": "true",
+      "view_index": "14",
+      "collection.can_add": "true",
+      "actions.skipping_next_past_track": "resume",
+      "context_uri": "spotify:playlist:37i9dQZF1E36Cg3wlE5W3P",
+      "artist_uri:1": "spotify:artist:0SHA3sB1gMMWcphYond5y3",
+      "album_title": "Café Belga",
+      "has_lyrics": "true",
+      "artist_name": "Taco Hemingway",
+      "actions.skipping_prev_past_track": "resume",
+      "marked_for_download": "false",
+      "collection.is_banned": "false",
+      "iteration": "0",
+      "is_explicit": "true",
+      "album_uri": "spotify:album:3fG8R9opVLvddvkUQ90feC",
+      "decision_id": "ssp~0656c821e5a0bba26927116af5754482732f",
+      "duration": "300000",
+      "popularity": "52"
+    },
+    "images": [
+      {
+        "label": "standard",
+        "url": "spotify:image:ab67616d00001e021ae95642444f4103490bead8"
+      },
+      {
+        "label": "small",
+        "url": "spotify:image:ab67616d000048511ae95642444f4103490bead8"
+      },
+      {
+        "label": "large",
+        "url": "spotify:image:ab67616d0000b2731ae95642444f4103490bead8"
+      },
+      {
+        "label": "xlarge",
+        "url": "spotify:image:ab67616d0000b2731ae95642444f4103490bead8"
+      }
+    ],
+    "listenDate": 1784296245361,
+    "dateFinalized": false
+  }
+]
