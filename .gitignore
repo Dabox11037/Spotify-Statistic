@@ -1,0 +1,9 @@
+config.py
+*.pyc
+__pycache__/
+staty.db
+*.log
+*.txt
+data
+Spotify Extended Streaming History
+fix_db.py
