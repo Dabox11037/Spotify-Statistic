@@ -2,14 +2,13 @@ import sqlite3
 import requests
 import time
 import logging
-from config import LASTFM_API_KEY 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 DB_PATH = "staty.db"
 try:
-    from config import LASTFM_API_KEY
+    from config.config import LASTFM_API_KEY
 except ImportError:
     LASTFM_API_KEY = None
     logging.error("Brak klucza API w config.py")

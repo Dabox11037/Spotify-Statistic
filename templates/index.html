@@ -334,6 +334,9 @@
         .card:nth-child(9) {
             animation-delay: 0.34s;
         }
+        .card:nth-child(10) {
+            animation-delay: 0.38s;
+        }
 
         @keyframes fadeUp {
             0% {
@@ -1089,6 +1092,14 @@
                 <div id="skipped-artists-list"></div>
             </div>
 
+            <!-- ─── GENRES (NOWA KARTA) ─── -->
+            <div class="card" id="genres-card">
+                <h3>🎤 <span class="accent">Ulubione gatunki</span> <span style="font-weight:400;color:var(--text-muted);font-size:11px;text-transform:none;">(czas)</span></h3>
+                <div id="genres-summary" style="font-size:13px;color:var(--text-muted);margin-bottom:12px;"></div>
+                <div class="chart-wrapper" style="height:220px;"><canvas id="genresChart"></canvas></div>
+                <div id="genres-list" style="margin-top:12px;"></div>
+            </div>
+
             <!-- Hours chart -->
             <div class="card">
                 <h3>🕒 <span class="accent">Godziny słuchania</span></h3>
@@ -1174,13 +1185,17 @@
                 statusChart.options.plugins.legend.labels.color = labelColor;
                 statusChart.update();
             }
+            if (genresChart) {
+                genresChart.options.plugins.legend.labels.color = labelColor;
+                genresChart.update();
+            }
         }
 
         /* ============================================================
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
            CHARTS
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-        let hoursChart, weekdayChart, statusChart;
+        let hoursChart, weekdayChart, statusChart, genresChart;
 
         function initCharts() {
             const common = {
@@ -1282,6 +1297,51 @@
                     }
                 }
             });
+
+            // ─── GENRES CHART ───
+            const ctxGenres = document.getElementById('genresChart').getContext('2d');
+            const genreColors = isNeon ?
+                ['#00ffc8', '#40ffd8', '#80ffd0', '#b0ffe0', '#e0fff0', '#ffd700', '#ff6b6b', '#4d96ff', '#ff6bcb'] :
+                ['#1db954', '#1ed760', '#2ecc71', '#27ae60', '#1abc9c', '#f1c40f', '#e67e22', '#3498db', '#9b59b6'];
+
+            genresChart = new Chart(ctxGenres, {
+                type: 'pie',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        data: [],
+                        backgroundColor: genreColors,
+                        borderWidth: 2,
+                        borderColor: 'var(--bg-card)',
+                    }]
+                },
+                options: {
+                    ...common,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: labelColor,
+                                boxWidth: 12,
+                                padding: 10,
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                font: { size: 11 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                    const pct = total ? ((ctx.parsed / total) * 100).toFixed(1) : 0;
+                                    const hours = (ctx.parsed / 3600).toFixed(1);
+                                    return ctx.label + ': ' + hours + 'h (' + pct + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
         }
 
         /* ============================================================
@@ -1371,6 +1431,8 @@
                     sub.className = 'sub';
                     sub.textContent = item.artist || 'Nieznany';
                     name.appendChild(sub);
+                } else if (item.genre) {
+                    name.textContent = item.genre;
                 } else {
                     name.textContent = item.artist || 'Nieznany';
                 }
@@ -1483,6 +1545,104 @@
 
         /* ============================================================
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           GENRES – FETCH & RENDER
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+        function updateGenres(period) {
+            fetchData('/stats/genres', period, (data) => {
+                renderGenres(data);
+            });
+        }
+
+        function renderGenres(data) {
+            const container = document.getElementById('genres-list');
+            const summary = document.getElementById('genres-summary');
+
+            if (!data || data.length === 0) {
+                container.innerHTML = `<div class="empty-state"><span class="big">🏷️</span>Brak danych o gatunkach</div>`;
+                summary.textContent = 'Dodaj gatunki do artystów w bazie danych.';
+                genresChart.data.labels = [];
+                genresChart.data.datasets[0].data = [];
+                genresChart.update();
+                return;
+            }
+
+            // Oblicz sumę całkowitą
+            const totalSeconds = data.reduce((sum, item) => sum + item.seconds, 0);
+            const totalHours = totalSeconds / 3600;
+
+            // Najpopularniejszy gatunek
+            const topGenre = data[0];
+            const topHours = topGenre.seconds / 3600;
+
+            summary.innerHTML = `
+                        🏆 Najpopularniejszy: <strong style="color:var(--accent);">${topGenre.genre}</strong> 
+                        (${topHours.toFixed(1)}h, ${((topGenre.seconds / totalSeconds) * 100).toFixed(1)}% wszystkich odsłuchań)
+                        <span style="margin-left:12px;color:var(--text-muted);font-size:11px;">
+                            Łącznie: ${totalHours.toFixed(1)}h słuchania gatunków
+                        </span>
+                    `;
+
+            // Aktualizuj wykres
+            const labels = data.map(item => item.genre);
+            const values = data.map(item => item.seconds);
+
+            genresChart.data.labels = labels;
+            genresChart.data.datasets[0].data = values;
+            genresChart.update();
+
+            // Lista gatunków (top 10)
+            const top10 = data.slice(0, 10);
+            container.innerHTML = '';
+            top10.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = 'list-item';
+
+                const rank = document.createElement('span');
+                rank.className = 'rank';
+                const rankNum = idx + 1;
+                if (rankNum === 1) rank.className += ' gold';
+                else if (rankNum === 2) rank.className += ' silver';
+                else if (rankNum === 3) rank.className += ' bronze';
+                else rank.className += ' default';
+                rank.textContent = `#${rankNum}`;
+
+                const name = document.createElement('span');
+                name.className = 'name';
+                name.textContent = item.genre;
+
+                const value = document.createElement('span');
+                value.className = 'value';
+                const hours = item.seconds / 3600;
+                const pct = ((item.seconds / totalSeconds) * 100).toFixed(1);
+                value.textContent = `${hours.toFixed(1)}h (${pct}%)`;
+
+                div.appendChild(rank);
+                div.appendChild(name);
+                div.appendChild(value);
+                container.appendChild(div);
+            });
+
+            // Jeśli jest więcej niż 10, dodaj informację o pozostałych
+            if (data.length > 10) {
+                const restSeconds = data.slice(10).reduce((sum, item) => sum + item.seconds, 0);
+                const restHours = restSeconds / 3600;
+                const restPct = ((restSeconds / totalSeconds) * 100).toFixed(1);
+                const div = document.createElement('div');
+                div.className = 'list-item';
+                div.style.color = 'var(--text-muted)';
+                div.style.fontSize = '12px';
+                div.style.fontStyle = 'italic';
+                div.innerHTML = `
+                            <span class="rank">...</span>
+                            <span class="name">Pozostałe ${data.length - 10} gatunki</span>
+                            <span class="value">${restHours.toFixed(1)}h (${restPct}%)</span>
+                        `;
+                container.appendChild(div);
+            }
+        }
+
+        /* ============================================================
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
            STATS UPDATE FUNCTIONS
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
         function updateOverview(period) {
@@ -1566,6 +1726,7 @@
             updateTopTracks(period);
             updateSkippedTracks(period);
             updateSkippedArtists(period);
+            updateGenres(period);
             updateHoursChart(period);
             updateWeekdayChart(period);
             updateStatusChart(period);
@@ -1588,10 +1749,10 @@
             // Initial load
             refreshAll('week');
 
-            // Now Playing poll every 2 seconds (real-time)
+            // Now Playing poll every 10 seconds
             setInterval(updateNowPlaying, 10000);
 
-            // Stats refresh every 30 seconds
+            // Stats refresh every 60 seconds
             setInterval(() => {
                 refreshAll(currentPeriod);
             }, 60000);
